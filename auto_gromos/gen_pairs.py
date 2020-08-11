@@ -24,3 +24,5 @@ class Gen14Pairs(Processor):
             for ndx in pairs:
                 molecule.interactions["pairs"].append(
                     Interaction(atoms=(ndx, node), parameters=["2"], meta={}))
+
+        return molecule

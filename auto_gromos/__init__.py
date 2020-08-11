@@ -29,4 +29,7 @@ else:
 
 del pbr
 
-from . import AssignFunctionalGroups, SelectDihedrals, Gen14Pairs, RemoveDuplicates
+from .assign_functional_groups import AssignFunctionalGroups
+from .select_dihedrals import SelectDihedrals
+from .gen_pairs import Gen14Pairs
+from .remove_duplicates import RemoveDuplicates

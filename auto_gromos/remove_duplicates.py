@@ -23,3 +23,5 @@ class RemoveDuplicates(Processor):
             molecule.interactions[inter_type] = []
             for inter in inter_dict.values():
                 molecule.interactions[inter_type].append(inter)
+
+        return molecule

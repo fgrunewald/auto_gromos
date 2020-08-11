@@ -4,8 +4,28 @@ from vermouth.molecule import Choice, attributes_match
 from vermouth.ffinput import read_ff
 from vermouth.forcefield import ForceField
 from auto_gromos import DATA_PATH
-from auto_gromos.gen_bonded_interactions import delete_atomname
 
+def delete_atomname(molecule):
+    """
+    Delete the atomname attribute form a molecule
+    and return it as dict.
+
+    Parameters:
+    -----------
+    molecule: `:class:vermouth.molecule`
+
+    Returns:
+    --------
+    molecule
+        the molecule with no atomname attribute
+    atomnames
+        the atomname dict
+    """
+    atomnames = nx.get_node_attributes(molecule, "atomname")
+    for node in molecule.nodes:
+        del molecule.nodes[node]["atomname"]
+
+    return molecule, atomnames
 
 def _atoms_match(node1, node2):
     return attributes_match(node1, node2, ignore_keys=('order', 'replace', 'name'))
