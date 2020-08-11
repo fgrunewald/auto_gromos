@@ -22,8 +22,9 @@ def delete_atomname(molecule):
         the atomname dict
     """
     atomnames = nx.get_node_attributes(molecule, "atomname")
-    for node in molecule.nodes:
-        del molecule.nodes[node]["atomname"]
+    if len(atomnames) > 0:
+       for node in molecule.nodes:
+           del molecule.nodes[node]["atomname"]
 
     return molecule, atomnames
 
@@ -85,7 +86,7 @@ class AssignFunctionalGroups(Processor):
         self.molecule = molecule
         func_groups = ForceField("functional-groups")
         # ToDo use pathlib for this
-        with open(DATA_PATH + "gromos2016H66_fgroups.ff", "r") as _file:
+        with open(DATA_PATH + "/2016H66/gromos2016H66_fgroups.ff", "r") as _file:
             lines = _file.readlines()
 
         read_ff(lines, func_groups)

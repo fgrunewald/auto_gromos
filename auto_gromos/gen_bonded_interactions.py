@@ -1,7 +1,7 @@
 import networkx as nx
 from vermouth.processors.do_links import DoLinks
 from auto_gromos import AssignFunctionalGroups, SelectDihedrals, Gen14Pairs, RemoveDuplicates
-from assign_functional_groups import delete_atomname
+from auto_gromos.assign_functional_groups import delete_atomname
 
 def gen_bonded_interactions(molecule):
     """

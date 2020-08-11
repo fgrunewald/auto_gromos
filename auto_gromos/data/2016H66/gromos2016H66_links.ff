@@ -1,7 +1,7 @@
 [ macros ]
-ALL_ATOM "CH1|CH2|CH3|OA|OE|C|O|NL|NT|N|NZ|SI|P|S"
-CHn "CH1|CH2|CH3"
-CHnC "CH1|CH2|CH3|C"
+ALL_ATOM "CH0|H|CH1|CH2|CH3|OA|OE|C|O|NL|NT|N|NZ|SI|P|S"
+CHn "CH0|CH1|CH2|CH3"
+CHnC "CH0|CH1|CH2|CH3|C"
 
 ; 1_bonds_0 
 [ link ]
@@ -9,15 +9,15 @@ CHnC "CH1|CH2|CH3|C"
 0 { "atype": "OA", "order": 1} 
 1 { "atype": "H", "order": 1} 
 [ bonds ]
-+0 +1 gb_1 {"type": "1", "commnet": "OA-H" } 
++0 +1 2 gb_1 {"type": "1", "commnet": "OA-H" } 
 
 ; 2_bonds_0 
 [ link ]
 [ atoms ]
-0 { "aatype": "N", "order": 1} 
+0 { "atype": "N|NT", "order": 1} 
 1 { "atype": "H", "order": 1} 
 [ bonds ]
-+0 +1 gb_2 {"type": "2", "comment":"N-H" } 
++0 +1 2 gb_2 {"type": "2", "comment":"N-H" } 
 
 ; 3_bonds_0 
 [ link ]
@@ -25,7 +25,7 @@ CHnC "CH1|CH2|CH3|C"
 0 { "atype": "C", "order": 1 } 
 1 { "atype": "HC", "order": 1 } 
 [ bonds ]
-+0 +1 gb3 {"type": "3", "comment": "C-HC"} 
++0 +1 2 gb_3 {"type": "3", "comment": "C-HC"} 
 
 ; 4_bonds_0 only for HEME
 
@@ -35,7 +35,7 @@ CHnC "CH1|CH2|CH3|C"
 0 { "atype": "C", "order": 1 } 
 1 { "atype": "O", "order": 1 } 
 [ bonds ]
-+0 +1 gb_5 {"type": "5", "comment": "O-C" } 
++0 +1 2 gb_5 {"type": "5", "comment": "O-C" } 
 
 ; 6_bonds_0 
 [ link ]
@@ -43,7 +43,7 @@ CHnC "CH1|CH2|CH3|C"
 0 { "atype": "C", "order": 1 } 
 1 { "atype": "OM", "order": 1 } 
 [ bonds ]
-+0 +1 gb6 {"type": "6", "comment": "C-OM"} 
++0 +1 2 gb6 {"type": "6", "comment": "C-OM"} 
 
 ; 7 6-ring
 
@@ -53,7 +53,7 @@ CHnC "CH1|CH2|CH3|C"
 0 { "atype": "S", "order": 1 } 
 1 { "atype": "H", "order": 1 } 
 [ bonds ]
-+0 +1 gb_8 {"type": "8", "comment":"S-H" } 
++0 +1 2 gb_8 {"type": "8", "comment":"S-H" } 
 
 ; 9_bonds_0 
 [ link ]
@@ -61,17 +61,23 @@ CHnC "CH1|CH2|CH3|C"
 0 { "atype": "C", "order": 1 } 
 1 { "atype": "NT|NL", "order": 1 } 
 [ bonds ]
-+0 +1 gb_9 {"type": "9", "comment": "C-NT,NL" } 
++0 +1 2 gb_9 {"type": "9", "comment": "C-NT,NL" } 
 
-; special pepeptide ring
+; 10_bonds_0 
+[ link ]
+[ atoms ]
+0 { "atype": "C", "order": 1 } 
+1 { "atype": "N", "order": 1 } 
+[ bonds ]
++0 +1 2 gb_10 {"type": "10", "comment": "C-N" } 
 
 ; 11_bonds_0 
 [ link ]
 [ atoms ]
 0 { "atype": "C", "order": 1 } 
-1 { "atype": "N|NZ|NE", "order": 1 } 
+1 { "atype": "NZ|NE", "order": 1 } 
 [ bonds ]
-+0 +1 gb_11 {"type": "11", "comment": "C-N,NZ,NE" } 
++0 +1 2 gb_11 {"type": "11", "comment": "C-N,NZ,NE" } 
 
 ; 13_bonds_0 
 [ link ]
@@ -79,7 +85,7 @@ CHnC "CH1|CH2|CH3|C"
 0 { "atype": "C", "order": 1 } 
 1 { "atype": "OA|OE", "order": 1 } 
 [ bonds ]
-+0 +1 gb_13 {"type": "13", "comment":"C-OA,OE" } 
++0 +1 2 gb_13 {"type": "13", "comment":"C-OA,OE" } 
 
 ; 18_bonds_0 
 [ link ]
@@ -87,7 +93,7 @@ CHnC "CH1|CH2|CH3|C"
 0 { "atype": $CHn , "order": 1 } 
 1 { "atype": "OA|OE", "order": 1 } 
 [ bonds ]
-+0 +1 gb_18 {"type": "18", "comment": "CHn-OA,OE" } 
++0 +1 2 gb_18 {"type": "18", "comment": "CHn-OA,OE" } 
 
 ; 19_bonds_0 
 [ link ]
@@ -95,7 +101,7 @@ CHnC "CH1|CH2|CH3|C"
 0 { "atype": $CHn , "order": 1 } 
 1 { "atype": "OM", "order": 1 } 
 [ bonds ]
-+0 +1 gb_19 {"type": "19", "comment": "CHn-OM" } 
++0 +1 2 gb_19 {"type": "19", "comment": "CHn-OM" } 
 
 ; 21_bonds_0 
 [ link ]
@@ -103,7 +109,7 @@ CHnC "CH1|CH2|CH3|C"
 0 { "atype": $CHn , "order": 1 } 
 1 { "atype": "N|NT|NL|NZ|NE", "order": 1 } 
 [ bonds ]
-+0 +1 gb_21 {"type": "21", "comment": "CHn-N,NT,NL,NZ,NE" } 
++0 +1 2 gb_21 {"type": "21", "comment": "CHn-N,NT,NL,NZ,NE" } 
 
 ; 24_bonds_0 
 [ link ]
@@ -111,7 +117,7 @@ CHnC "CH1|CH2|CH3|C"
 0 { "atype": "O|OM", "order": 1 } 
 1 { "atype": "P", "order": 1 } 
 [ bonds ]
-+0 +1 gb_24 {"type": "24", "comment":"O,OM-P" } 
++0 +1 2 gb_24 {"type": "24", "comment":"O,OM-P" } 
 
 ; 25_bonds_0 
 [ link ]
@@ -119,7 +125,7 @@ CHnC "CH1|CH2|CH3|C"
 0 { "atype": "O", "order": 1 } 
 1 { "atype": "S", "order": 1 } 
 [ bonds ]
-+0 +1 gb_25 {"type": "25", "comment": "O-S" } 
++0 +1 2 gb_25 {"type": "25", "comment": "O-S" } 
 
 ; 27_bonds_0 
 [ link ]
@@ -127,7 +133,7 @@ CHnC "CH1|CH2|CH3|C"
 0 { "atype": $CHnC , "order": 1 } 
 1 { "atype": $CHnC , "order": 1 }
 [ bonds ]
-+0 +1 gb_27 {"type": "27", "comment": "C,CHn-CHn,C" } 
++0 +1 2 gb_27 {"type": "27", "comment": "C,CHn-CHn,C" } 
 
 ; 28_bonds_0 
 [ link ]
@@ -135,7 +141,7 @@ CHnC "CH1|CH2|CH3|C"
 0 { "atype": "OA", "order": 1 } 
 1 { "atype": "P", "order": 1 } 
 [ bonds ]
-+0 +1 gb_28 {"type": "28", "comment": "OA-P" } 
++0 +1 2 gb_28 {"type": "28", "comment": "OA-P" } 
 
 ; 29_bonds_0 
 [ link ]
@@ -143,7 +149,7 @@ CHnC "CH1|CH2|CH3|C"
 0 { "atype": "OA", "order": 1 } 
 1 { "atype": "SI", "order": 1 } 
 [ bonds ]
-+0 +1 gb_29 {"type": "29", "comment":"OA-SI" } 
++0 +1 2 gb_29 {"type": "29", "comment":"OA-SI" } 
 
 ; 30_bonds_0 
 [ link ]
@@ -151,7 +157,7 @@ CHnC "CH1|CH2|CH3|C"
 0 { "atype": "FE", "order": 1 } 
 1 { "atype": "C", "order": 1 } 
 [ bonds ]
-+0 +1 gb_30 {"type": "30", "comment": "FE-C" } 
++0 +1  2 gb_30 {"type": "30", "comment": "FE-C" } 
 
 ; 31_bonds_0 
 [ link ]
@@ -159,7 +165,7 @@ CHnC "CH1|CH2|CH3|C"
 0 { "atype": "CH3", "order": 1 } 
 1 { "atype": "S", "order": 1 } 
 [ bonds ]
-+0 +1 gb_31 {"type": "31", "comment": "CH3-S" } 
++0 +1  2 gb_31 {"type": "31", "comment": "CH3-S" } 
 
 ; 32_bonds_0 
 [ link ]
@@ -167,7 +173,7 @@ CHnC "CH1|CH2|CH3|C"
 0 { "atype": "CH2", "order": 1 } 
 1 { "atype": "S", "order": 1 } 
 [ bonds ]
-+0 +1 gb_32 {"type": "32", "comment": "CH2-S" } 
++0 +1 2 gb_32 {"type": "32", "comment": "CH2-S" } 
 
 ; 33_bonds_0 
 [ link ]
@@ -175,7 +181,7 @@ CHnC "CH1|CH2|CH3|C"
 0 { "atype": "CH1", "order": 1 } 
 1 { "atype": "SI", "order": 1 } 
 [ bonds ]
-+0 +1 gb_33 {"type": "33", "comment": "CH1:SI" } 
++0 +1 2 gb_33 {"type": "33", "comment": "CH1:SI" } 
 
 ; 34_bonds_0 
 [ link ]
@@ -183,7 +189,7 @@ CHnC "CH1|CH2|CH3|C"
 0 { "atype": "NR", "order": 1 } 
 1 { "atype": "FE", "order": 1 } 
 [ bonds ]
-+0 +1 gb_34 {"type": "34", "comment": "NR-FE" } 
++0 +1 2 gb_34 {"type": "34", "comment": "NR-FE" } 
 
 ; 36_bonds_0 
 [ link ]
@@ -191,7 +197,7 @@ CHnC "CH1|CH2|CH3|C"
 0 { "atype": "S", "order": 1 } 
 1 { "atype": "S", "order": 1 } 
 [ bonds ]
-+0 +1 gb_36 {"type": "36", "comment":"S-S" } 
++0 +1  2 gb_36 {"type": "36", "comment":"S-S" } 
 
 ; 37_bonds_0 
 [ link ]
@@ -199,7 +205,7 @@ CHnC "CH1|CH2|CH3|C"
 0 { "atype": "NR", "order": 1 } 
 1 { "atype": "FE", "order": 1 } 
 [ bonds ]
-+0 +1 gb_37 {"type": "37", "comment":"NR-FE" } 
++0 +1 2 gb_37 {"type": "37", "comment":"NR-FE" } 
 
 ; 38_bonds_0 
 [ link ]
@@ -207,7 +213,7 @@ CHnC "CH1|CH2|CH3|C"
 0 { "atype": "OWat", "order": 1 } 
 1 { "atype": "HWat", "order": 1 } 
 [ bonds ]
-+0 +1 gb_38 {"type": "38", "comment": "OWat-HWat" } 
++0 +1 2 gb_38 {"type": "38", "comment": "OWat-HWat" } 
 
 ; 39_bonds_0 
 [ link ]
@@ -215,7 +221,7 @@ CHnC "CH1|CH2|CH3|C"
 0 { "atype": "CChl", "order": 1 } 
 1 { "atype": "HChl", "order": 1 } 
 [ bonds ]
-+0 +1 gb_39 {"type": "39", "comment": "CChl-HChl" } 
++0 +1 2 gb_39 {"type": "39", "comment": "CChl-HChl" } 
 
 ; 40_bonds_0 
 [ link ]
@@ -223,7 +229,7 @@ CHnC "CH1|CH2|CH3|C"
 0 { "atype": "CChl", "order": 1 } 
 1 { "atype": "CLChl", "order": 1 } 
 [ bonds ]
-+0 +1 gb_40 {"type": "40", "comment":"CChl-CLChl" } 
++0 +1 2 gb_40 {"type": "40", "comment":"CChl-CLChl" } 
 
 ; 41_bonds_0 
 [ link ]
@@ -231,7 +237,7 @@ CHnC "CH1|CH2|CH3|C"
 0 { "atype": "SDmso", "order": 1 } 
 1 { "atype": "ODmso", "order": 1 } 
 [ bonds ]
-+0 +1 gb_41 {"type": "41", "comment":"SDmso-ODmso" } 
++0 +1 2 gb_41 {"type": "41", "comment":"SDmso-ODmso" } 
 
 ; 42_bonds_0 
 [ link ]
@@ -239,7 +245,7 @@ CHnC "CH1|CH2|CH3|C"
 0 { "atype": "CDmso", "order": 1 } 
 1 { "atype": "SDmso", "order": 1 } 
 [ bonds ]
-+0 +1 gb_42 {"type": "42", "comment":"CDmso-SDmso" } 
++0 +1 2 gb_42 {"type": "42", "comment":"CDmso-SDmso" } 
 
 ; 43_bonds_0 
 [ link ]
@@ -247,7 +253,7 @@ CHnC "CH1|CH2|CH3|C"
 0 { "atype": "CCl4", "order": 1 } 
 1 { "atype": "CLCl4", "order": 1 } 
 [ bonds ]
-+0 +1 gb_43 {"type": "43", "comment":"CCl4-CLCl4" } 
++0 +1 2 gb_43 {"type": "43", "comment":"CCl4-CLCl4" } 
 
 ; 44_bonds_0 
 [ link ]
@@ -255,7 +261,7 @@ CHnC "CH1|CH2|CH3|C"
 0 { "atype": "CUrea", "order": 1 } 
 1 { "atype": "OUrea", "order": 1 } 
 [ bonds ]
-+0 +1 gb_44 {"type": "44", "comment":"CUrea-OUrea" } 
++0 +1 2 gb_44 {"type": "44", "comment":"CUrea-OUrea" } 
 
 ; 45_bonds_0 
 [ link ]
@@ -263,7 +269,7 @@ CHnC "CH1|CH2|CH3|C"
 0 { "atype": "CUrea", "order": 1 } 
 1 { "atype": "NUrea", "order": 1 } 
 [ bonds ]
-+0 +1 gb_45 {"type": "45", "comment":"CUrea-NUrea" } 
++0 +1 2 gb_45 {"type": "45", "comment":"CUrea-NUrea" } 
 
 ; 46_bonds_0 
 [ link ]
@@ -271,7 +277,7 @@ CHnC "CH1|CH2|CH3|C"
 0 { "atype": "HWat", "order": 1 } 
 1 { "atype": "HWat", "order": 1 } 
 [ bonds ]
-+0 +1 gb_46 {"type": "46", "comment":"HWat-HWat" } 
++0 +1 2  gb_46 {"type": "46", "comment":"HWat-HWat" } 
 
 ; 47_bonds_0 
 [ link ]
@@ -279,7 +285,7 @@ CHnC "CH1|CH2|CH3|C"
 0 { "atype": "CLChl", "order": 1 } 
 1 { "atype": "HChl", "order": 1 } 
 [ bonds ]
-+0 +1 gb_47 {"type": "47", "comment":"CLChl-HChl" } 
++0 +1 2 gb_47 {"type": "47", "comment":"CLChl-HChl" } 
 
 ; 48_bonds_0 
 [ link ]
@@ -287,7 +293,7 @@ CHnC "CH1|CH2|CH3|C"
 0 { "atype": "CLChl", "order": 1 } 
 1 { "atype": "CLChl", "order": 1 } 
 [ bonds ]
-+0 +1 gb_48 {"type": "48", "comment":"CLChl-CLChl" } 
++0 +1 2 gb_48 {"type": "48", "comment":"CLChl-CLChl" } 
 
 ; 49_bonds_0 
 [ link ]
@@ -295,7 +301,7 @@ CHnC "CH1|CH2|CH3|C"
 0 { "atype": "CDmso", "order": 1 } 
 1 { "atype": "ODmso", "order": 1 } 
 [ bonds ]
-+0 +1 gb_49 {"type": "49", "comment":"CDmso-ODmso" } 
++0 +1 2 gb_49 {"type": "49", "comment":"CDmso-ODmso" } 
 
 ; 50_bonds_0 
 [ link ]
@@ -303,7 +309,7 @@ CHnC "CH1|CH2|CH3|C"
 0 { "atype": "CDmso", "order": 1 } 
 1 { "atype": "CDmso", "order": 1 } 
 [ bonds ]
-+0 +1 gb_50 {"type": "50", "comment":"CDmso-CDMso" } 
++0 +1 2 gb_50 {"type": "50", "comment":"CDmso-CDMso" } 
 
 ; 51_bonds_0 
 [ link ]
@@ -311,7 +317,7 @@ CHnC "CH1|CH2|CH3|C"
 0 { "atype": "CMet", "order": 1 } 
 1 { "atype": "HMet", "order": 1 } 
 [ bonds ]
-+0 +1 gb_51 {"type": "51", "comment":"CMet-HMet" } 
++0 +1 2 gb_51 {"type": "51", "comment":"CMet-HMet" } 
 
 ; 52_bonds_0 
 [ link ]
@@ -319,7 +325,7 @@ CHnC "CH1|CH2|CH3|C"
 0 { "atype": "CLCl4", "order": 1 } 
 1 { "atype": "CLCl4", "order": 1 } 
 [ bonds ]
-+0 +1 gb_52 {"type": "52", "comment":"CLCl4-CLCl4" } 
++0 +1 2 gb_52 {"type": "52", "comment":"CLCl4-CLCl4" } 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;            ANGLES
@@ -337,11 +343,11 @@ CHnC "CH1|CH2|CH3|C"
 ; 4_angles_0 
 [ link ]
 [ atoms ]
-0 { "atype": "CH2", "order": 1 } 
+0 { "atype": "CH2|CH3", "order": 1 } 
 1 { "atype": "S", "order": 1 } 
-2 { "atype": "CH3", "order": 1 } 
+2 { "atype": "CH3|CH2", "order": 1 } 
 [ angles ]
-+0 +1 +2 2 ga_4 {"type": "4", "comment":"CH2-S-CH3" } 
++0 +1 +2 2 ga_4 {"type": "4", "comment":"CH3,CH2-S-CH3,CH2" } 
 
 ; 5_angles_0 
 [ link ]
@@ -355,11 +361,21 @@ CHnC "CH1|CH2|CH3|C"
 ; 6_angles_0 
 [ link ]
 [ atoms ]
-0 { "atype": "CH2", "order": 1 } 
+0 { "atype": "CH2|CH3", "order": 1 } 
 1 { "atype": "S", "order": 1 } 
 2 { "atype": "S", "order": 1 } 
 [ angles ]
 +0 +1 +2 2 ga_6 {"type": "6", "comment":"CH2-S-S" } 
+
+
+; 10_angles_0 
+[ link ]
+[ atoms ]
+0 { "atype": "H", "order": 1 } 
+1 { "atype": "NL|NT", "order": 1 } 
+2 { "atype": "H" , "order": 1 } 
+[ angles ]
++0 +1 +2 2 ga_10 {"type": "10", "comment":"H-NL,NT-H" } 
 
 ; 11_angles_0 
 [ link ]
@@ -409,9 +425,18 @@ CHnC "CH1|CH2|CH3|C"
 ; 15_angles_0 
 [ link ]
 [ atoms ]
-0 { "atype": $CHn , "order": 1 } 
+0 { "atype": $CHnC , "order": 1 } 
 1 { "atype": $CHn , "order": 1 } 
 2 { "atype": "C|CH1|CH2|CH3|OA|OE|NR|NT|NL", "order": 1 } 
+[ angles ]
++0 +1 +2 2 ga_15 {"type": "15", "comment":"CHn-CHn-C,CHn,OA,OE,NR,NT,NL" } 
+
+; 15_angles_0 
+[ link ]
+[ atoms ]
+0 { "atype": $CHn , "order": 1 } 
+1 { "atype": "C|CH1|CH2|CH3|OA|OE|NR|NT|NL" , "order": 1 } 
+2 { "atype": $CHn , "order": 1 } 
 [ angles ]
 +0 +1 +2 2 ga_15 {"type": "15", "comment":"CHn-CHn-C,CHn,OA,OE,NR,NT,NL" } 
 
@@ -518,19 +543,19 @@ CHnC "CH1|CH2|CH3|C"
 [ link ]
 [ atoms ]
 0 { "atype": "H", "order": 1 } 
-1 { "atype": "NT|NZ", "order": 1 } 
+1 { "atype": "N|NZ", "order": 1 } 
 2 { "atype": "H", "order": 1 } 
 [ angles ]
 +0 +1 +2 2 ga_24 {"type": "24", "comment":"H-NT,NZ-H" } 
 
 ; 25_angles_0 
-[ link ]
-[ atoms ]
-0 { "atype": "H", "order": 1 } 
-1 { "atype": "NT", "order": 1 } 
-2 { "atype": $CHn , "order": 1 } 
-[ angles ]
-+0 +1 +2 2 ga_25 {"type": "25", "comment":"H-NT-CHn" } 
+;[ link ]
+;[ atoms ]
+;0 { "atype": "H", "order": 1 } 
+;1 { "atype": "NT", "order": 1 } 
+;2 { "atype": $CHn , "order": 1 } 
+;[ angles ]
+;+0 +1 +2 2 ga_25 {"type": "25", "comment":"H-NT-CHn" } 
 
 ; 25_angles_1
 [ link ]
@@ -595,14 +620,16 @@ CHnC "CH1|CH2|CH3|C"
 [ angles ]
 +0 +1 +2 2 ga_31 {"type": "31", "comment":"CH1,CH2-N-C" } 
 
+
 ; 31_angles_1 
 [ link ]
 [ atoms ]
 0 { "atype": "O", "order": 1 } 
 1 { "atype": "C", "order": 1 } 
-2 { "atype": "OA|OE|CH1|CH2|CH3", "order": 1 } 
+2 { "atype": "OA|OE|CH2|CH1|CH3", "order": 1 } 
 [ angles ]
 +0 +1 +2 2 ga_31 {"type": "31", "comment":"O-C-OA,OE,CHn" } 
+
 
 ; 32_angles_0 
 [ link ]
@@ -630,6 +657,15 @@ CHnC "CH1|CH2|CH3|C"
 2 { "atype": "CH2", "order": 1 } 
 [ angles ]
 +0 +1 +2 2 ga_33 {"type": "33", "comment":"C-NE-CH2" } 
+
+; 33_angles_1
+[ link ]
+[ atoms ]
+0 { "atype": "O", "order": 1, "fgroup":"aldehyde"  } 
+1 { "atype": "C", "order": 1, "fgroup":"aldehyde"  } 
+2 { "atype": $CHn , "order": 1, "fgroup":"aldehyde" } 
+[ angles ]
++0 +1 +2 2 ga_33 {"type": "33", "comment":"O-C-CHn aldehyde" } 
 
 ; 35_angles_0
 [ link ]
@@ -900,6 +936,16 @@ CHnC "CH1|CH2|CH3|C"
 [ dihedrals ]
 +0 +1 +2 +3 1 gd_22 {"type": "22", "priority": 0, "comment":"X-OA-P-X" } 
 
+; 23_dihedrals_0 
+[ link ]
+[ atoms ]
+0 { "atype": $ALL_ATOM , "order": 1 } 
+1 { "atype": $CHn , "order": 1 } 
+2 { "atype": "OA", "order": 1 } 
+3 { "atype": $ALL_ATOM , "order": 1 } 
+[ dihedrals ]
++0 +1 +2 +3 1 gd_23 {"type": "23", "priority": 0, "comment":"X-CHn-OA-X" } 
+
 ; 24_dihedrals_0 
 [ link ]
 [ atoms ]
@@ -949,6 +995,16 @@ CHnC "CH1|CH2|CH3|C"
 3 { "atype": $ALL_ATOM , "order": 1 } 
 [ dihedrals ]
 +0 +1 +2 +3 1 gd_33 {"type": "33", "priority": 1, "comment":"HC-C-C-X" } 
+
+; 34_dihedrals_0 
+[ link ]
+[ atoms ]
+0 { "atype": $ALL_ATOM , "order": 1 } 
+1 { "atype": "CH1|CH2|CH3|SI", "order": 1 } 
+2 { "atype": $CHn , "order": 1 } 
+3 { "atype": $ALL_ATOM , "order": 1 } 
+[ dihedrals ]
++0 +1 +2 +3 1 gd_34 {"type": "34", "priority": 0, "comment":"X-SI,CHn-CHn-X" } 
 
 ; 38_dihedrals_0 
 [ link ]

@@ -1,0 +1,2379 @@
+[ bondedtypes ]
+; bonds  angles  dihedrals  impropers
+    2       2          1          2
+
+;MTBUILDBLSOLUTE
+;@BLOCKTYPE 2016H66_orga.mtb BLK MTL SOL TYPE MOLE NAME methanol
+; building block (residue, nucleotide, etc.)
+; RNME
+[ MTL ]
+; number of atoms, number of preceding exclusions
+; NMAT NLIN
+;    3    0
+ [ atoms ]
+; atoms
+;ATOM ANM  IACM MASS        CGMICGM MAE MSAE
+H1    H            0.41000   0
+O1    OA          -0.70000   0
+C1    CH3          0.29000   0
+ [ bonds ]
+;  ai    aj   gromos type
+; bonds
+;  NB
+;     2
+;  IB   JB  MCB
+H1      O1      gb_1
+O1      C1      gb_18
+ [ angles ]
+;  ai    aj    ak   gromos type
+; bond angles
+; NBA
+;     1
+;  IB   JB   KB  MCB
+H1      O1      C1      ga_12
+ [ impropers ]
+;  ai    aj    ak    al   gromos type
+; improper dihedrals
+; NIDA
+; 
+;  IB   JB   KB   LB  MCB
+ [ dihedrals ]
+;  ai    aj    ak    al   gromos type
+; dihedrals
+; NDA
+;     0
+;  IB   JB   KB   LB  MCB
+;
+;MTBUILDBLSOLUTE
+;@BLOCKTYPE 2016H66_orga.mtb BLK ETL SOL TYPE MOLE NAME ethanol
+; building block (residue, nucleotide, etc.)
+; RNME
+[ ETL ]
+; number of atoms, number of preceding exclusions
+; NMAT NLIN
+;    4    0
+ [ atoms ]
+; atoms
+;ATOM ANM  IACM MASS        CGMICGM MAE MSAE
+H1    H            0.41000   0
+O1    OA          -0.70000   0
+C1    CH2          0.29000   0
+C2    CH3          0.00000   1
+ [ bonds ]
+;  ai    aj   gromos type
+; bonds
+;  NB
+;     3
+;  IB   JB  MCB
+H1      O1      gb_1
+O1      C1      gb_18
+C1      C2      gb_27
+ [ angles ]
+;  ai    aj    ak   gromos type
+; bond angles
+; NBA
+;     2
+;  IB   JB   KB  MCB
+H1      O1      C1      ga_12
+O1      C1      C2      ga_15
+ [ impropers ]
+;  ai    aj    ak    al   gromos type
+; improper dihedrals
+; NIDA
+; 
+;  IB   JB   KB   LB  MCB
+ [ dihedrals ]
+;  ai    aj    ak    al   gromos type
+; dihedrals
+; NDA
+;     1
+;  IB   JB   KB   LB  MCB
+H1      O1      C1      C2      gd_23
+;
+;MTBUILDBLSOLUTE
+;@BLOCKTYPE 2016H66_orga.mtb BLK 1PL SOL TYPE MOLE NAME 1-propanol
+; building block (residue, nucleotide, etc.)
+; RNME
+[ 1PL ]
+; number of atoms, number of preceding exclusions
+; NMAT NLIN
+;    5    0
+ [ atoms ]
+; atoms
+;ATOM ANM  IACM MASS        CGMICGM MAE MSAE
+H1    H            0.41000   0
+O1    OA          -0.70000   0
+C1    CH2          0.29000   0
+C2    CH2          0.00000   1
+C3    CH3          0.00000   1
+ [ bonds ]
+;  ai    aj   gromos type
+; bonds
+;  NB
+;     4
+;  IB   JB  MCB
+H1      O1      gb_1
+O1      C1      gb_18
+C1      C2      gb_27
+C2      C3      gb_27
+ [ angles ]
+;  ai    aj    ak   gromos type
+; bond angles
+; NBA
+;     3
+;  IB   JB   KB  MCB
+H1      O1      C1      ga_12
+O1      C1      C2      ga_15
+C1      C2      C3      ga_15
+ [ impropers ]
+;  ai    aj    ak    al   gromos type
+; improper dihedrals
+; NIDA
+; 
+;  IB   JB   KB   LB  MCB
+ [ dihedrals ]
+;  ai    aj    ak    al   gromos type
+; dihedrals
+; NDA
+;     2
+;  IB   JB   KB   LB  MCB
+H1      O1      C1      C2      gd_23
+O1      C1      C2      C3      gd_34
+;
+;MTBUILDBLSOLUTE
+;@BLOCKTYPE 2016H66_orga.mtb BLK 2PL SOL TYPE MOLE NAME 2-propanol
+; building block (residue, nucleotide, etc.)
+; RNME
+[ 2PL ]
+; number of atoms, number of preceding exclusions
+; NMAT NLIN
+;    5    0
+ [ atoms ]
+; atoms
+;ATOM ANM  IACM MASS        CGMICGM MAE MSAE
+C1    CH3          0.00000   0
+O1    OA          -0.70000   1
+H1    H            0.41000   1
+C2    CH1          0.29000   1
+C3    CH3          0.00000   2
+ [ bonds ]
+;  ai    aj   gromos type
+; bonds
+;  NB
+;     4
+;  IB   JB  MCB
+C1      C2      gb_27
+O1      H1      gb_1
+O1      C2      gb_18
+C2      C3      gb_27
+ [ angles ]
+;  ai    aj    ak   gromos type
+; bond angles
+; NBA
+;     4
+;  IB   JB   KB  MCB
+H1      O1      C2      ga_12
+C1      C2      O1      ga_15
+C1      C2      C3      ga_15
+O1      C2      C3      ga_15
+ [ impropers ]
+;  ai    aj    ak    al   gromos type
+; improper dihedrals
+; NIDA
+; 
+;  IB   JB   KB   LB  MCB
+C2      C1      O1      C3      gi_2
+ [ dihedrals ]
+;  ai    aj    ak    al   gromos type
+; dihedrals
+; NDA
+;     1
+;  IB   JB   KB   LB  MCB
+H1      O1      C2      C1      gd_23
+;
+;MTBUILDBLSOLUTE
+;@BLOCKTYPE 2016H66_orga.mtb BLK BTL SOL TYPE MOLE NAME 1-butanol
+; building block (residue, nucleotide, etc.)
+; RNME
+[ BTL ]
+; number of atoms, number of preceding exclusions
+; NMAT NLIN
+;    6    0
+ [ atoms ]
+; atoms
+;ATOM ANM  IACM MASS        CGMICGM MAE MSAE
+H1    H            0.41000   0
+O1    OA          -0.70000   0
+C1    CH2          0.29000   0
+C2    CH2          0.00000   1
+C3    CH2          0.00000   1
+C4    CH3          0.00000   1
+ [ bonds ]
+;  ai    aj   gromos type
+; bonds
+;  NB
+;     5
+;  IB   JB  MCB
+H1      O1      gb_1
+O1      C1      gb_18
+C1      C2      gb_27
+C2      C3      gb_27
+C3      C4      gb_27
+ [ angles ]
+;  ai    aj    ak   gromos type
+; bond angles
+; NBA
+;     4
+;  IB   JB   KB  MCB
+H1      O1      C1      ga_12
+O1      C1      C2      ga_15
+C1      C2      C3      ga_15
+C2      C3      C4      ga_15
+ [ impropers ]
+;  ai    aj    ak    al   gromos type
+; improper dihedrals
+; NIDA
+; 
+;  IB   JB   KB   LB  MCB
+ [ dihedrals ]
+;  ai    aj    ak    al   gromos type
+; dihedrals
+; NDA
+;     3
+;  IB   JB   KB   LB  MCB
+H1      O1      C1      C2      gd_23
+O1      C1      C2      C3      gd_34
+C1      C2      C3      C4      gd_34
+;
+;MTBUILDBLSOLUTE
+;@BLOCKTYPE 2016H66_orga.mtb BLK PTL SOL TYPE MOLE NAME 1-pentanol
+; building block (residue, nucleotide, etc.)
+; RNME
+[ PTL ]
+; number of atoms, number of preceding exclusions
+; NMAT NLIN
+;    7    0
+ [ atoms ]
+; atoms
+;ATOM ANM  IACM MASS        CGMICGM MAE MSAE
+H1    H            0.41000   0
+O1    OA          -0.70000   0
+C1    CH2          0.29000   0
+C2    CH2          0.00000   1
+C3    CH2          0.00000   1
+C4    CH2          0.00000   2
+C5    CH3          0.00000   2
+ [ bonds ]
+;  ai    aj   gromos type
+; bonds
+;  NB
+;     6
+;  IB   JB  MCB
+H1      O1      gb_1
+O1      C1      gb_18
+C1      C2      gb_27
+C2      C3      gb_27
+C3      C4      gb_27
+C4      C5      gb_27
+ [ angles ]
+;  ai    aj    ak   gromos type
+; bond angles
+; NBA
+;     5
+;  IB   JB   KB  MCB
+H1      O1      C1      ga_12
+O1      C1      C2      ga_15
+C1      C2      C3      ga_15
+C2      C3      C4      ga_15
+C3      C4      C5      ga_15
+ [ impropers ]
+;  ai    aj    ak    al   gromos type
+; improper dihedrals
+; NIDA
+; 
+;  IB   JB   KB   LB  MCB
+ [ dihedrals ]
+;  ai    aj    ak    al   gromos type
+; dihedrals
+; NDA
+;     4
+;  IB   JB   KB   LB  MCB
+H1      O1      C1      C2      gd_23
+O1      C1      C2      C3      gd_34
+C1      C2      C3      C4      gd_34
+C2      C3      C4      C5      gd_34
+;
+;MTBUILDBLSOLUTE
+;@BLOCKTYPE 2016H66_orga.mtb BLK HXL SOL TYPE MOLE NAME 1-hexanol
+; building block (residue, nucleotide, etc.)
+; RNME
+[ HXL ]
+; number of atoms, number of preceding exclusions
+; NMAT NLIN
+;    8    0
+ [ atoms ]
+; atoms
+;ATOM ANM  IACM MASS        CGMICGM MAE MSAE
+H1    H            0.41000   0
+O1    OA          -0.70000   0
+C1    CH2          0.29000   0
+C2    CH2          0.00000   1
+C3    CH2          0.00000   1
+C4    CH2          0.00000   1
+C5    CH2          0.00000   2
+C6    CH3          0.00000   2
+ [ bonds ]
+;  ai    aj   gromos type
+; bonds
+;  NB
+;     7
+;  IB   JB  MCB
+H1      O1      gb_1
+O1      C1      gb_18
+C1      C2      gb_27
+C2      C3      gb_27
+C3      C4      gb_27
+C4      C5      gb_27
+C5      C6      gb_27
+ [ angles ]
+;  ai    aj    ak   gromos type
+; bond angles
+; NBA
+;     6
+;  IB   JB   KB  MCB
+H1      O1      C1      ga_12
+O1      C1      C2      ga_15
+C1      C2      C3      ga_15
+C2      C3      C4      ga_15
+C3      C4      C5      ga_15
+C4      C5      C6      ga_15
+ [ impropers ]
+;  ai    aj    ak    al   gromos type
+; improper dihedrals
+; NIDA
+; 
+;  IB   JB   KB   LB  MCB
+ [ dihedrals ]
+;  ai    aj    ak    al   gromos type
+; dihedrals
+; NDA
+;     5
+;  IB   JB   KB   LB  MCB
+H1      O1      C1      C2      gd_23
+O1      C1      C2      C3      gd_34
+C1      C2      C3      C4      gd_34
+C2      C3      C4      C5      gd_34
+C3      C4      C5      C6      gd_34
+;
+;MTBUILDBLSOLUTE
+;@BLOCKTYPE 2016H66_orga.mtb BLK HPL SOL TYPE MOLE NAME 1-heptanol
+; building block (residue, nucleotide, etc.)
+; RNME
+[ HPL ]
+; number of atoms, number of preceding exclusions
+; NMAT NLIN
+;    9    0
+ [ atoms ]
+; atoms
+;ATOM ANM  IACM MASS        CGMICGM MAE MSAE
+H1    H            0.41000   0
+O1    OA          -0.70000   0
+C1    CH2          0.29000   0
+C2    CH2          0.00000   1
+C3    CH2          0.00000   1
+C4    CH2          0.00000   2
+C5    CH2          0.00000   2
+C6    CH2          0.00000   3
+C7    CH3          0.00000   3
+ [ bonds ]
+;  ai    aj   gromos type
+; bonds
+;  NB
+;     8
+;  IB   JB  MCB
+H1      O1      gb_1
+O1      C1      gb_18
+C1      C2      gb_27
+C2      C3      gb_27
+C3      C4      gb_27
+C4      C5      gb_27
+C5      C6      gb_27
+C6      C7      gb_27
+ [ angles ]
+;  ai    aj    ak   gromos type
+; bond angles
+; NBA
+;     7
+;  IB   JB   KB  MCB
+H1      O1      C1      ga_12
+O1      C1      C2      ga_15
+C1      C2      C3      ga_15
+C2      C3      C4      ga_15
+C3      C4      C5      ga_15
+C4      C5      C6      ga_15
+C5      C6      C7      ga_15
+ [ impropers ]
+;  ai    aj    ak    al   gromos type
+; improper dihedrals
+; NIDA
+; 
+;  IB   JB   KB   LB  MCB
+ [ dihedrals ]
+;  ai    aj    ak    al   gromos type
+; dihedrals
+; NDA
+;     6
+;  IB   JB   KB   LB  MCB
+H1      O1      C1      C2      gd_23
+O1      C1      C2      C3      gd_34
+C1      C2      C3      C4      gd_34
+C2      C3      C4      C5      gd_34
+C3      C4      C5      C6      gd_34
+C4      C5      C6      C7      gd_34
+;
+;MTBUILDBLSOLUTE
+;@BLOCKTYPE 2016H66_orga.mtb BLK OTL SOL TYPE MOLE NAME 1-octanol
+; building block (residue, nucleotide, etc.)
+; RNME
+[ OTL ]
+; number of atoms, number of preceding exclusions
+; NMAT NLIN
+;   10    0
+ [ atoms ]
+; atoms
+;ATOM ANM  IACM MASS        CGMICGM MAE MSAE
+H1    H            0.41000   0
+O1    OA          -0.70000   0
+C1    CH2          0.29000   0
+C2    CH2          0.00000   1
+C3    CH2          0.00000   1
+C4    CH2          0.00000   1
+C5    CH2          0.00000   2
+C6    CH2          0.00000   2
+C7    CH2          0.00000   3
+C8    CH3          0.00000   3
+ [ bonds ]
+;  ai    aj   gromos type
+; bonds
+;  NB
+;     9
+;  IB   JB  MCB
+H1      O1      gb_1
+O1      C1      gb_18
+C1      C2      gb_27
+C2      C3      gb_27
+C3      C4      gb_27
+C4      C5      gb_27
+C5      C6      gb_27
+C6      C7      gb_27
+C7      C8      gb_27
+ [ angles ]
+;  ai    aj    ak   gromos type
+; bond angles
+; NBA
+;     8
+;  IB   JB   KB  MCB
+H1      O1      C1      ga_12
+O1      C1      C2      ga_15
+C1      C2      C3      ga_15
+C2      C3      C4      ga_15
+C3      C4      C5      ga_15
+C4      C5      C6      ga_15
+C5      C6      C7      ga_15
+C6      C7      C8      ga_15
+ [ impropers ]
+;  ai    aj    ak    al   gromos type
+; improper dihedrals
+; NIDA
+; 
+;  IB   JB   KB   LB  MCB
+ [ dihedrals ]
+;  ai    aj    ak    al   gromos type
+; dihedrals
+; NDA
+;     7
+;  IB   JB   KB   LB  MCB
+H1      O1      C1      C2      gd_23
+O1      C1      C2      C3      gd_34
+C1      C2      C3      C4      gd_34
+C2      C3      C4      C5      gd_34
+C3      C4      C5      C6      gd_34
+C4      C5      C6      C7      gd_34
+C5      C6      C7      C8      gd_34
+;
+;MTBUILDBLSOLUTE
+;@BLOCKTYPE 2016H66_orga.mtb BLK 2BTL SOL TYPE MOLE NAME 2-butanol
+; building block (residue, nucleotide, etc.)
+; RNME
+[ 2BTL ]
+; number of atoms, number of preceding exclusions
+; NMAT NLIN
+;    6    0
+ [ atoms ]
+; atoms
+;ATOM ANM  IACM MASS        CGMICGM MAE MSAE
+C1    CH3          0.00000   0
+C2    CH1          0.29000   1
+O1    OA          -0.70000   1
+H1    H            0.41000   1
+C3    CH2          0.00000   2
+C4    CH3          0.00000   2
+ [ bonds ]
+;  ai    aj   gromos type
+; bonds
+;  NB
+;     5
+;  IB   JB  MCB
+C1      C2      gb_27
+C2      O1      gb_18
+C2      C3      gb_27
+O1      H1      gb_1
+C3      C4      gb_27
+ [ angles ]
+;  ai    aj    ak   gromos type
+; bond angles
+; NBA
+;     5
+;  IB   JB   KB  MCB
+C1      C2      O1      ga_15
+C1      C2      C3      ga_15
+O1      C2      C3      ga_15
+C2      O1      H1      ga_12
+C2      C3      C4      ga_15
+ [ impropers ]
+;  ai    aj    ak    al   gromos type
+; improper dihedrals
+; NIDA
+; 
+;  IB   JB   KB   LB  MCB
+C2      C1      O1      C3      gi_2
+ [ dihedrals ]
+;  ai    aj    ak    al   gromos type
+; dihedrals
+; NDA
+;     2
+;  IB   JB   KB   LB  MCB
+C1      C2      O1      H1      gd_23
+C1      C2      C3      C4      gd_34
+;
+;MTBUILDBLSOLUTE
+;@BLOCKTYPE 2016H66_orga.mtb BLK 2PTL SOL TYPE MOLE NAME 2-pentanol
+; building block (residue, nucleotide, etc.)
+; RNME
+[ 2PTL ]
+; number of atoms, number of preceding exclusions
+; NMAT NLIN
+;    7    0
+ [ atoms ]
+; atoms
+;ATOM ANM  IACM MASS        CGMICGM MAE MSAE
+C1    CH3          0.00000   0
+C2    CH1          0.29000   1
+O1    OA          -0.70000   1
+H1    H            0.41000   1
+C3    CH2          0.00000   2
+C4    CH2          0.00000   2
+C5    CH3          0.00000   2
+ [ bonds ]
+;  ai    aj   gromos type
+; bonds
+;  NB
+;     6
+;  IB   JB  MCB
+C1      C2      gb_27
+C2      O1      gb_18
+C2      C3      gb_27
+O1      H1      gb_1
+C3      C4      gb_27
+C4      C5      gb_27
+ [ angles ]
+;  ai    aj    ak   gromos type
+; bond angles
+; NBA
+;     6
+;  IB   JB   KB  MCB
+C1      C2      O1      ga_15
+C1      C2      C3      ga_15
+O1      C2      C3      ga_15
+C2      O1      H1      ga_12
+C2      C3      C4      ga_15
+C3      C4      C5      ga_15
+ [ impropers ]
+;  ai    aj    ak    al   gromos type
+; improper dihedrals
+; NIDA
+; 
+;  IB   JB   KB   LB  MCB
+C2      C1      O1      C3      gi_2
+ [ dihedrals ]
+;  ai    aj    ak    al   gromos type
+; dihedrals
+; NDA
+;     3
+;  IB   JB   KB   LB  MCB
+C1      C2      O1      H1      gd_23
+C1      C2      C3      C4      gd_34
+C2      C3      C4      C5      gd_34
+;
+;MTBUILDBLSOLUTE
+;@BLOCKTYPE 2016H66_orga.mtb BLK 3PTL SOL TYPE MOLE NAME 3-pentanol
+; building block (residue, nucleotide, etc.)
+; RNME
+[ 3PTL ]
+; number of atoms, number of preceding exclusions
+; NMAT NLIN
+;    7    0
+ [ atoms ]
+; atoms
+;ATOM ANM  IACM MASS        CGMICGM MAE MSAE
+C1    CH3          0.00000   0
+C2    CH2          0.00000   0
+C3    CH1          0.29000   1
+O1    OA          -0.70000   1
+H1    H            0.41000   1
+C4    CH2          0.00000   2
+C5    CH3          0.00000   2
+ [ bonds ]
+;  ai    aj   gromos type
+; bonds
+;  NB
+;     6
+;  IB   JB  MCB
+C1      C2      gb_27
+C2      C3      gb_27
+C3      O1      gb_18
+C3      C4      gb_27
+O1      H1      gb_1
+C4      C5      gb_27
+ [ angles ]
+;  ai    aj    ak   gromos type
+; bond angles
+; NBA
+;     6
+;  IB   JB   KB  MCB
+C1      C2      C3      ga_15
+C2      C3      O1      ga_15
+C2      C3      C4      ga_15
+O1      C3      C4      ga_15
+C3      O1      H1      ga_12
+C3      C4      C5      ga_15
+ [ impropers ]
+;  ai    aj    ak    al   gromos type
+; improper dihedrals
+; NIDA
+; 
+;  IB   JB   KB   LB  MCB
+C4      C2      O1      C3      gi_2
+ [ dihedrals ]
+;  ai    aj    ak    al   gromos type
+; dihedrals
+; NDA
+;     3
+;  IB   JB   KB   LB  MCB
+C1      C2      C3      O1      gd_34
+C2      C3      O1      H1      gd_23
+C2      C3      C4      C5      gd_34
+;
+;MTBUILDBLSOLUTE
+;@BLOCKTYPE 2016H66_orga.mtb BLK 2M2P SOL TYPE MOLE NAME 2-methyl-2-propanol
+; building block (residue, nucleotide, etc.)
+; RNME
+[ 2M2P ]
+; number of atoms, number of preceding exclusions
+; NMAT NLIN
+;    6    0
+ [ atoms ]
+; atoms
+;ATOM ANM  IACM MASS        CGMICGM MAE MSAE
+C1    CH0          0.29000   0
+O1    OA          -0.70000   0
+H1    H            0.41000   0
+C2    CH3          0.00000   1
+C3    CH3          0.00000   2
+C4    CH3          0.00000   3
+ [ bonds ]
+;  ai    aj   gromos type
+; bonds
+;  NB
+;     5
+;  IB   JB  MCB
+C1      O1      gb_18
+C1      C2      gb_27
+C1      C3      gb_27
+C1      C4      gb_27
+O1      H1      gb_1
+ [ angles ]
+;  ai    aj    ak   gromos type
+; bond angles
+; NBA
+;     7
+;  IB   JB   KB  MCB
+O1      C1      C2      ga_15
+O1      C1      C3      ga_15
+O1      C1      C4      ga_15
+C2      C1      C3      ga_15
+C2      C1      C4      ga_15
+C3      C1      C4      ga_15
+C1      O1      H1      ga_12
+ [ impropers ]
+;  ai    aj    ak    al   gromos type
+; improper dihedrals
+; NIDA
+; 
+;  IB   JB   KB   LB  MCB
+ [ dihedrals ]
+;  ai    aj    ak    al   gromos type
+; dihedrals
+; NDA
+;     1
+;  IB   JB   KB   LB  MCB
+C2      C1      O1      H1      gd_23
+;
+;MTBUILDBLSOLUTE
+;@BLOCKTYPE 2016H66_orga.mtb BLK 2M2B SOL TYPE MOLE NAME 2-methyl-2-butanol
+; building block (residue, nucleotide, etc.)
+; RNME
+[ 2M2B ]
+; number of atoms, number of preceding exclusions
+; NMAT NLIN
+;    7    0
+ [ atoms ]
+; atoms
+;ATOM ANM  IACM MASS        CGMICGM MAE MSAE
+C1    CH0          0.29000   0
+O1    OA          -0.70000   0
+H1    H            0.41000   0
+C2    CH3          0.00000   1
+C3    CH3          0.00000   2
+C4    CH2          0.00000   3
+C5    CH3          0.00000   3
+ [ bonds ]
+;  ai    aj   gromos type
+; bonds
+;  NB
+;     6
+;  IB   JB  MCB
+C1      O1      gb_18
+C1      C2      gb_27
+C1      C3      gb_27
+C1      C4      gb_27
+O1      H1      gb_1
+C4      C5      gb_27
+ [ angles ]
+;  ai    aj    ak   gromos type
+; bond angles
+; NBA
+;     8
+;  IB   JB   KB  MCB
+O1      C1      C2      ga_15
+O1      C1      C3      ga_15
+O1      C1      C4      ga_15
+C2      C1      C3      ga_15
+C2      C1      C4      ga_15
+C3      C1      C4      ga_15
+C1      O1      H1      ga_12
+C1      C4      C5      ga_15
+ [ impropers ]
+;  ai    aj    ak    al   gromos type
+; improper dihedrals
+; NIDA
+; 
+;  IB   JB   KB   LB  MCB
+ [ dihedrals ]
+;  ai    aj    ak    al   gromos type
+; dihedrals
+; NDA
+;     2
+;  IB   JB   KB   LB  MCB
+C2      C1      O1      H1      gd_23
+O1      C1      C4      C5      gd_34
+;
+;MTBUILDBLSOLUTE
+;@BLOCKTYPE 2016H66_orga.mtb BLK DME SOL TYPE MOLE NAME dimethylether
+; building block (residue, nucleotide, etc.)
+; RNME
+[ DME ]
+; number of atoms, number of preceding exclusions
+; NMAT NLIN
+;    3    0
+ [ atoms ]
+; atoms
+;ATOM ANM  IACM MASS        CGMICGM MAE MSAE
+C2    CH3          0.29000   0
+O1    OE          -0.58000   0
+C3    CH3          0.29000   0
+ [ bonds ]
+;  ai    aj   gromos type
+; bonds
+;  NB
+;     2
+;  IB   JB  MCB
+C2      O1      gb_18
+O1      C3      gb_18
+ [ angles ]
+;  ai    aj    ak   gromos type
+; bond angles
+; NBA
+;     1
+;  IB   JB   KB  MCB
+C2      O1      C3      ga_15
+ [ impropers ]
+;  ai    aj    ak    al   gromos type
+; improper dihedrals
+; NIDA
+; 
+;  IB   JB   KB   LB  MCB
+ [ dihedrals ]
+;  ai    aj    ak    al   gromos type
+; dihedrals
+; NDA
+;     0
+;  IB   JB   KB   LB  MCB
+;
+;MTBUILDBLSOLUTE
+;@BLOCKTYPE 2016H66_orga.mtb BLK DEE SOL TYPE MOLE NAME diethylether
+; building block (residue, nucleotide, etc.)
+; RNME
+[ DEE ]
+; number of atoms, number of preceding exclusions
+; NMAT NLIN
+;    5    0
+ [ atoms ]
+; atoms
+;ATOM ANM  IACM MASS        CGMICGM MAE MSAE
+C1    CH3          0.00000   0
+C2    CH2          0.29000   1
+O1    OE          -0.58000   1
+C3    CH2          0.29000   1
+C4    CH3          0.00000   2
+ [ bonds ]
+;  ai    aj   gromos type
+; bonds
+;  NB
+;     4
+;  IB   JB  MCB
+C1      C2      gb_27
+C2      O1      gb_18
+O1      C3      gb_18
+C3      C4      gb_27
+ [ angles ]
+;  ai    aj    ak   gromos type
+; bond angles
+; NBA
+;     3
+;  IB   JB   KB  MCB
+C1      C2      O1      ga_15
+C2      O1      C3      ga_15
+O1      C3      C4      ga_15
+ [ impropers ]
+;  ai    aj    ak    al   gromos type
+; improper dihedrals
+; NIDA
+; 
+;  IB   JB   KB   LB  MCB
+ [ dihedrals ]
+;  ai    aj    ak    al   gromos type
+; dihedrals
+; NDA
+;     6
+;  IB   JB   KB   LB  MCB
+C1      C2      O1      C3      gd_42
+C1      C2      O1      C3      gd_43
+C1      C2      O1      C3      gd_44
+C2      O1      C3      C4      gd_42
+C2      O1      C3      C4      gd_43
+C2      O1      C3      C4      gd_44
+;
+;MTBUILDBLSOLUTE
+;@BLOCKTYPE 2016H66_orga.mtb BLK MPH SOL TYPE MOLE NAME methylpropylether
+; building block (residue, nucleotide, etc.)
+; RNME
+[ MPH ]
+; number of atoms, number of preceding exclusions
+; NMAT NLIN
+;    5    0
+ [ atoms ]
+; atoms
+;ATOM ANM  IACM MASS        CGMICGM MAE MSAE
+C1    CH3          0.29000   0
+O1    OE          -0.58000   0
+C2    CH2          0.29000   0
+C3    CH2          0.00000   1
+C4    CH3          0.00000   1
+ [ bonds ]
+;  ai    aj   gromos type
+; bonds
+;  NB
+;     4
+;  IB   JB  MCB
+C1      O1      gb_18
+O1      C2      gb_18
+C2      C3      gb_27
+C3      C4      gb_27
+ [ angles ]
+;  ai    aj    ak   gromos type
+; bond angles
+; NBA
+;     3
+;  IB   JB   KB  MCB
+C1      O1      C2      ga_15
+O1      C2      C3      ga_15
+C2      C3      C4      ga_15
+ [ impropers ]
+;  ai    aj    ak    al   gromos type
+; improper dihedrals
+; NIDA
+; 
+;  IB   JB   KB   LB  MCB
+ [ dihedrals ]
+;  ai    aj    ak    al   gromos type
+; dihedrals
+; NDA
+;     4
+;  IB   JB   KB   LB  MCB
+C1      O1      C2      C3      gd_42
+C1      O1      C2      C3      gd_43
+C1      O1      C2      C3      gd_44
+O1      C2      C3      C4      gd_34
+;
+;MTBUILDBLSOLUTE
+;@BLOCKTYPE 2016H66_orga.mtb BLK DXE SOL TYPE MOLE NAME 1,2-dimethoxyethane
+; building block (residue, nucleotide, etc.)
+; RNME
+[ DXE ]
+; number of atoms, number of preceding exclusions
+; NMAT NLIN
+;    6    0
+ [ atoms ]
+; atoms
+;ATOM ANM  IACM MASS        CGMICGM MAE MSAE
+C1    CH3          0.29000   0
+O1    OE          -0.58000   0
+C2    CH2          0.29000   0
+C3    CH2          0.29000   1
+O2    OE          -0.58000   1
+C4    CH3          0.29000   1
+ [ bonds ]
+;  ai    aj   gromos type
+; bonds
+;  NB
+;     5
+;  IB   JB  MCB
+C1      O1      gb_18
+O1      C2      gb_18
+C2      C3      gb_27
+C3      O2      gb_18
+O2      C4      gb_18
+ [ angles ]
+;  ai    aj    ak   gromos type
+; bond angles
+; NBA
+;     4
+;  IB   JB   KB  MCB
+C1      O1      C2      ga_15
+O1      C2      C3      ga_15
+C2      C3      O2      ga_15
+C3      O2      C4      ga_15
+ [ impropers ]
+;  ai    aj    ak    al   gromos type
+; improper dihedrals
+; NIDA
+; 
+;  IB   JB   KB   LB  MCB
+ [ dihedrals ]
+;  ai    aj    ak    al   gromos type
+; dihedrals
+; NDA
+;     9
+;  IB   JB   KB   LB  MCB
+C1      O1      C2      C3      gd_42
+C1      O1      C2      C3      gd_43
+C1      O1      C2      C3      gd_44
+O1      C2      C3      O2      gd_45
+O1      C2      C3      O2      gd_46
+O1      C2      C3      O2      gd_47
+C2      C3      O2      C4      gd_42
+C2      C3      O2      C4      gd_43
+C2      C3      O2      C4      gd_44
+;
+;MTBUILDBLSOLUTE
+;@BLOCKTYPE 2016H66_orga.mtb BLK EAL SOL TYPE MOLE NAME ethanal
+; building block (residue, nucleotide, etc.)
+; RNME
+[ EAL ]
+; number of atoms, number of preceding exclusions
+; NMAT NLIN
+;    4    0
+ [ atoms ]
+; atoms
+;ATOM ANM  IACM MASS        CGMICGM MAE MSAE
+C1    C            0.37500   0
+O1    O           -0.47500   0
+H1    HC           0.10000   0
+C2    CH3          0.00000   0
+ [ bonds ]
+;  ai    aj   gromos type
+; bonds
+;  NB
+;     3
+;  IB   JB  MCB
+C1      O1      gb_5
+C1      H1      gb_3
+C1      C2      gb_27
+ [ angles ]
+;  ai    aj    ak   gromos type
+; bond angles
+; NBA
+;     3
+;  IB   JB   KB  MCB
+O1      C1      H1      ga_25
+O1      C1      C2      ga_33
+H1      C1      C2      ga_21
+ [ impropers ]
+;  ai    aj    ak    al   gromos type
+; improper dihedrals
+; NIDA
+; 
+;  IB   JB   KB   LB  MCB
+C1      O1      H1      C2      gi_1
+ [ dihedrals ]
+;  ai    aj    ak    al   gromos type
+; dihedrals
+; NDA
+;     0
+;  IB   JB   KB   LB  MCB
+;
+;MTBUILDBLSOLUTE
+;@BLOCKTYPE 2016H66_orga.mtb BLK PAL SOL TYPE MOLE NAME propanal
+; building block (residue, nucleotide, etc.)
+; RNME
+[ PAL ]
+; number of atoms, number of preceding exclusions
+; NMAT NLIN
+;    5    0
+ [ atoms ]
+; atoms
+;ATOM ANM  IACM MASS        CGMICGM MAE MSAE
+C1    C            0.37500   0
+O1    O           -0.47500   0
+H1    HC           0.10000   0
+C2    CH2          0.00000   1
+C3    CH3          0.00000   1
+ [ bonds ]
+;  ai    aj   gromos type
+; bonds
+;  NB
+;     4
+;  IB   JB  MCB
+C1      O1      gb_5
+C1      H1      gb_3
+C1      C2      gb_27
+C2      C3      gb_27
+ [ angles ]
+;  ai    aj    ak   gromos type
+; bond angles
+; NBA
+;     4
+;  IB   JB   KB  MCB
+O1      C1      H1      ga_25
+O1      C1      C2      ga_33
+H1      C1      C2      ga_21
+C1      C2      C3      ga_15
+ [ impropers ]
+;  ai    aj    ak    al   gromos type
+; improper dihedrals
+; NIDA
+; 
+;  IB   JB   KB   LB  MCB
+C1      O1      H1      C2      gi_1
+ [ dihedrals ]
+;  ai    aj    ak    al   gromos type
+; dihedrals
+; NDA
+;     1
+;  IB   JB   KB   LB  MCB
+O1      C1      C2      C3      gd_40
+;
+;MTBUILDBLSOLUTE
+;@BLOCKTYPE 2016H66_orga.mtb BLK BAL SOL TYPE MOLE NAME butanal
+; building block (residue, nucleotide, etc.)
+; RNME
+[ BAL ]
+; number of atoms, number of preceding exclusions
+; NMAT NLIN
+;    6    0
+ [ atoms ]
+; atoms
+;ATOM ANM  IACM MASS        CGMICGM MAE MSAE
+C1    C            0.37500   0
+O1    O           -0.47500   0
+H1    HC           0.10000   0
+C2    CH2          0.00000   1
+C3    CH2          0.00000   1
+C4    CH3          0.00000   1
+ [ bonds ]
+;  ai    aj   gromos type
+; bonds
+;  NB
+;     5
+;  IB   JB  MCB
+C1      O1      gb_5
+C1      H1      gb_3
+C1      C2      gb_27
+C2      C3      gb_27
+C3      C4      gb_27
+ [ angles ]
+;  ai    aj    ak   gromos type
+; bond angles
+; NBA
+;     5
+;  IB   JB   KB  MCB
+O1      C1      H1      ga_25
+O1      C1      C2      ga_33
+H1      C1      C2      ga_21
+C1      C2      C3      ga_15
+C2      C3      C4      ga_15
+ [ impropers ]
+;  ai    aj    ak    al   gromos type
+; improper dihedrals
+; NIDA
+; 
+;  IB   JB   KB   LB  MCB
+C1      O1      H1      C2      gi_1
+ [ dihedrals ]
+;  ai    aj    ak    al   gromos type
+; dihedrals
+; NDA
+;     2
+;  IB   JB   KB   LB  MCB
+O1      C1      C2      C3      gd_40
+C1      C2      C3      C4      gd_34
+;
+;MTBUILDBLSOLUTE
+;@BLOCKTYPE 2016H66_orga.mtb BLK PPN SOL TYPE MOLE NAME propanone
+; building block (residue, nucleotide, etc.)
+; RNME
+[ PPN ]
+; number of atoms, number of preceding exclusions
+; NMAT NLIN
+;    4    0
+ [ atoms ]
+; atoms
+;ATOM ANM  IACM MASS        CGMICGM MAE MSAE
+C1    CH3          0.00000   0
+C2    C            0.54000   1
+O1    O           -0.54000   1
+C3    CH3          0.00000   2
+ [ bonds ]
+;  ai    aj   gromos type
+; bonds
+;  NB
+;     3
+;  IB   JB  MCB
+C1      C2      gb_27
+C2      O1      gb_5
+C2      C3      gb_27
+ [ angles ]
+;  ai    aj    ak   gromos type
+; bond angles
+; NBA
+;     3
+;  IB   JB   KB  MCB
+C1      C2      O1      ga_31
+C1      C2      C3      ga_21
+O1      C2      C3      ga_31
+ [ impropers ]
+;  ai    aj    ak    al   gromos type
+; improper dihedrals
+; NIDA
+; 
+;  IB   JB   KB   LB  MCB
+C2      C1      O1      C3      gi_1
+ [ dihedrals ]
+;  ai    aj    ak    al   gromos type
+; dihedrals
+; NDA
+;     0
+;  IB   JB   KB   LB  MCB
+;
+;MTBUILDBLSOLUTE
+;@BLOCKTYPE 2016H66_orga.mtb BLK BTN SOL TYPE MOLE NAME butanone
+; building block (residue, nucleotide, etc.)
+; RNME
+[ BTN ]
+; number of atoms, number of preceding exclusions
+; NMAT NLIN
+;    5    0
+ [ atoms ]
+; atoms
+;ATOM ANM  IACM MASS        CGMICGM MAE MSAE
+C1    CH3          0.00000   0
+C2    C            0.54000   1
+O1    O           -0.54000   1
+C3    CH2          0.00000   2
+C4    CH3          0.00000   2
+ [ bonds ]
+;  ai    aj   gromos type
+; bonds
+;  NB
+;     4
+;  IB   JB  MCB
+C1      C2      gb_27
+C2      O1      gb_5
+C2      C3      gb_27
+C3      C4      gb_27
+ [ angles ]
+;  ai    aj    ak   gromos type
+; bond angles
+; NBA
+;     4
+;  IB   JB   KB  MCB
+C1      C2      O1      ga_31
+C1      C2      C3      ga_21
+O1      C2      C3      ga_31
+C2      C3      C4      ga_15
+ [ impropers ]
+;  ai    aj    ak    al   gromos type
+; improper dihedrals
+; NIDA
+; 
+;  IB   JB   KB   LB  MCB
+C2      C1      O1      C3      gi_1
+ [ dihedrals ]
+;  ai    aj    ak    al   gromos type
+; dihedrals
+; NDA
+;     1
+;  IB   JB   KB   LB  MCB
+C1      C2      C3      C4      gd_40
+;
+;MTBUILDBLSOLUTE
+;@BLOCKTYPE 2016H66_orga.mtb BLK 2PN SOL TYPE MOLE NAME 2-pentanone
+; building block (residue, nucleotide, etc.)
+; RNME
+[ 2PN ]
+; number of atoms, number of preceding exclusions
+; NMAT NLIN
+;    6    0
+ [ atoms ]
+; atoms
+;ATOM ANM  IACM MASS        CGMICGM MAE MSAE
+C1    CH3          0.00000   0
+C2    C            0.54000   1
+O1    O           -0.54000   1
+C3    CH2          0.00000   2
+C4    CH2          0.00000   2
+C5    CH3          0.00000   2
+ [ bonds ]
+;  ai    aj   gromos type
+; bonds
+;  NB
+;     5
+;  IB   JB  MCB
+C1      C2      gb_27
+C2      O1      gb_5
+C2      C3      gb_27
+C3      C4      gb_27
+C4      C5      gb_27
+ [ angles ]
+;  ai    aj    ak   gromos type
+; bond angles
+; NBA
+;     5
+;  IB   JB   KB  MCB
+C1      C2      O1      ga_31
+C1      C2      C3      ga_21
+O1      C2      C3      ga_31
+C2      C3      C4      ga_15
+C3      C4      C5      ga_15
+ [ impropers ]
+;  ai    aj    ak    al   gromos type
+; improper dihedrals
+; NIDA
+; 
+;  IB   JB   KB   LB  MCB
+C2      C1      O1      C3      gi_1
+ [ dihedrals ]
+;  ai    aj    ak    al   gromos type
+; dihedrals
+; NDA
+;     2
+;  IB   JB   KB   LB  MCB
+C1      C2      C3      C4      gd_40
+C2      C3      C4      C5      gd_34
+;
+;MTBUILDBLSOLUTE
+;@BLOCKTYPE 2016H66_orga.mtb BLK 3PN SOL TYPE MOLE NAME 3-pentanone
+; building block (residue, nucleotide, etc.)
+; RNME
+[ 3PN ]
+; number of atoms, number of preceding exclusions
+; NMAT NLIN
+;    6    0
+ [ atoms ]
+; atoms
+;ATOM ANM  IACM MASS        CGMICGM MAE MSAE
+C1    CH3          0.00000   0
+C2    CH2          0.00000   0
+C3    C            0.54000   1
+O1    O           -0.54000   1
+C4    CH2          0.00000   2
+C5    CH3          0.00000   2
+ [ bonds ]
+;  ai    aj   gromos type
+; bonds
+;  NB
+;     5
+;  IB   JB  MCB
+C1      C2      gb_27
+C2      C3      gb_27
+C3      O1      gb_5
+C3      C4      gb_27
+C4      C5      gb_27
+ [ angles ]
+;  ai    aj    ak   gromos type
+; bond angles
+; NBA
+;     5
+;  IB   JB   KB  MCB
+C1      C2      C3      ga_15
+C2      C3      O1      ga_31
+C2      C3      C4      ga_21
+O1      C3      C4      ga_31
+C3      C4      C5      ga_15
+ [ impropers ]
+;  ai    aj    ak    al   gromos type
+; improper dihedrals
+; NIDA
+; 
+;  IB   JB   KB   LB  MCB
+C3      C2      O1      C4      gi_1
+ [ dihedrals ]
+;  ai    aj    ak    al   gromos type
+; dihedrals
+; NDA
+;     2
+;  IB   JB   KB   LB  MCB
+C1      C2      C3      O1      gd_40
+C2      C3      C4      C5      gd_40
+;
+;MTBUILDBLSOLUTE
+;@BLOCKTYPE 2016H66_orga.mtb BLK 2HN SOL TYPE MOLE NAME 2-hexanone
+; building block (residue, nucleotide, etc.)
+; RNME
+[ 2HN ]
+; number of atoms, number of preceding exclusions
+; NMAT NLIN
+;    7    0
+ [ atoms ]
+; atoms
+;ATOM ANM  IACM MASS        CGMICGM MAE MSAE
+C1    CH3          0.00000   0
+C2    C            0.54000   1
+O1    O           -0.54000   1
+C3    CH2          0.00000   2
+C4    CH2          0.00000   2
+C5    CH2          0.00000   3
+C6    CH3          0.00000   3
+ [ bonds ]
+;  ai    aj   gromos type
+; bonds
+;  NB
+;     6
+;  IB   JB  MCB
+C1      C2      gb_27
+C2      O1      gb_5
+C2      C3      gb_27
+C3      C4      gb_27
+C4      C5      gb_27
+C5      C6      gb_27
+ [ angles ]
+;  ai    aj    ak   gromos type
+; bond angles
+; NBA
+;     6
+;  IB   JB   KB  MCB
+C1      C2      O1      ga_31
+C1      C2      C3      ga_21
+O1      C2      C3      ga_31
+C2      C3      C4      ga_15
+C3      C4      C5      ga_15
+C4      C5      C6      ga_15
+ [ impropers ]
+;  ai    aj    ak    al   gromos type
+; improper dihedrals
+; NIDA
+; 
+;  IB   JB   KB   LB  MCB
+C2      C1      O1      C3      gi_1
+ [ dihedrals ]
+;  ai    aj    ak    al   gromos type
+; dihedrals
+; NDA
+;     3
+;  IB   JB   KB   LB  MCB
+C1      C2      C3      C4      gd_40
+C2      C3      C4      C5      gd_34
+C3      C4      C5      C6      gd_34
+;
+;MTBUILDBLSOLUTE
+;@BLOCKTYPE 2016H66_orga.mtb BLK 3HN SOL TYPE MOLE NAME 3-hexanone
+; building block (residue, nucleotide, etc.)
+; RNME
+[ 3HN ]
+; number of atoms, number of preceding exclusions
+; NMAT NLIN
+;    7    0
+ [ atoms ]
+; atoms
+;ATOM ANM  IACM MASS        CGMICGM MAE MSAE
+C1    CH3          0.00000   0
+C2    CH2          0.00000   0
+C3    C            0.54000   1
+O1    O           -0.54000   1
+C4    CH2          0.00000   2
+C5    CH2          0.00000   2
+C6    CH3          0.00000   2
+ [ bonds ]
+;  ai    aj   gromos type
+; bonds
+;  NB
+;     6
+;  IB   JB  MCB
+C1      C2      gb_27
+C2      C3      gb_27
+C3      O1      gb_5
+C3      C4      gb_27
+C4      C5      gb_27
+C5      C6      gb_27
+ [ angles ]
+;  ai    aj    ak   gromos type
+; bond angles
+; NBA
+;     6
+;  IB   JB   KB  MCB
+C1      C2      C3      ga_15
+C2      C3      O1      ga_31
+C2      C3      C4      ga_21
+O1      C3      C4      ga_31
+C3      C4      C5      ga_15
+C4      C5      C6      ga_15
+ [ impropers ]
+;  ai    aj    ak    al   gromos type
+; improper dihedrals
+; NIDA
+; 
+;  IB   JB   KB   LB  MCB
+C3      C2      O1      C4      gi_1
+ [ dihedrals ]
+;  ai    aj    ak    al   gromos type
+; dihedrals
+; NDA
+;     3
+;  IB   JB   KB   LB  MCB
+C1      C2      C3      O1      gd_40
+C2      C3      C4      C5      gd_40
+C3      C4      C5      C6      gd_34
+;
+;MTBUILDBLSOLUTE
+;@BLOCKTYPE 2016H66_orga.mtb BLK EAE SOL TYPE MOLE NAME ethylacetate
+; building block (residue, nucleotide, etc.)
+; RNME
+[ EAE ]
+; number of atoms, number of preceding exclusions
+; NMAT NLIN
+;    6    0
+ [ atoms ]
+; atoms
+;ATOM ANM  IACM MASS        CGMICGM MAE MSAE
+C1    CH3          0.00000   0
+O1    O           -0.55000   1
+O2    OE          -0.37000   1
+C2    C            0.63000   1
+C3    CH2          0.29000   1
+C4    CH3          0.00000   2
+ [ bonds ]
+;  ai    aj   gromos type
+; bonds
+;  NB
+;     5
+;  IB   JB  MCB
+C1      C2      gb_27
+O1      C2      gb_5
+O2      C2      gb_13
+O2      C3      gb_18
+C3      C4      gb_27
+ [ angles ]
+;  ai    aj    ak   gromos type
+; bond angles
+; NBA
+;     5
+;  IB   JB   KB  MCB
+C2      O2      C3      ga_22
+C1      C2      O1      ga_35
+C1      C2      O2      ga_16
+O1      C2      O2      ga_31
+O2      C3      C4      ga_15
+ [ impropers ]
+;  ai    aj    ak    al   gromos type
+; improper dihedrals
+; NIDA
+; 
+;  IB   JB   KB   LB  MCB
+C2      C1      O1      O2      gi_1
+ [ dihedrals ]
+;  ai    aj    ak    al   gromos type
+; dihedrals
+; NDA
+;     2
+;  IB   JB   KB   LB  MCB
+C3      O2      C2      C1      gd_12
+C2      O2      C3      C4      gd_29
+;
+;MTBUILDBLSOLUTE
+;@BLOCKTYPE 2016H66_orga.mtb BLK MPE SOL TYPE MOLE NAME methylpropanoate
+; building block (residue, nucleotide, etc.)
+; RNME
+[ MPE ]
+; number of atoms, number of preceding exclusions
+; NMAT NLIN
+;    6    0
+ [ atoms ]
+; atoms
+;ATOM ANM  IACM MASS        CGMICGM MAE MSAE
+C1    CH3          0.29000   0
+O11   OE          -0.37000   0
+C11   C            0.63000   0
+O12   O           -0.55000   0
+C12   CH2          0.00000   1
+C13   CH3          0.00000   2
+ [ bonds ]
+;  ai    aj   gromos type
+; bonds
+;  NB
+;    5
+;  IB   JB  MCB
+C1      O11     gb_18
+O11     C11     gb_13
+C11     O12     gb_5
+C11     C12     gb_27
+C12     C13     gb_27
+ [ angles ]
+;  ai    aj    ak   gromos type
+; bond angles
+; NBA
+;    5
+;  IB   JB   KB  MCB
+C1      O11     C11     ga_22
+O11     C11     O12     ga_31
+O11     C11     C12     ga_16
+O12     C11     C12     ga_35
+C11     C12     C13     ga_15
+ [ impropers ]
+;  ai    aj    ak    al   gromos type
+; improper dihedrals
+; NIDA
+; 
+;  IB   JB   KB   LB  MCB
+C11     O11     C12     O12     gi_1
+ [ dihedrals ]
+;  ai    aj    ak    al   gromos type
+; dihedrals
+; NDA
+;    2
+;  IB   JB   KB   LB  MCB
+C1      O11     C11     C12     gd_12
+O11     C11     C12     C13     gd_40
+;
+;MTBUILDBLSOLUTE
+;@BLOCKTYPE 2016H66_orga.mtb BLK PAE SOL TYPE MOLE NAME propylacetate
+; building block (residue, nucleotide, etc.)
+; RNME
+[ PAE ]
+; number of atoms, number of preceding exclusions
+; NMAT NLIN
+;    7    0
+ [ atoms ]
+; atoms
+;ATOM ANM  IACM MASS        CGMICGM MAE MSAE
+C12   CH3          0.00000   0
+C11   C            0.63000   1
+O12   O           -0.55000   1
+O11   OE          -0.37000   1
+C1    CH2          0.29000   1
+C2    CH2          0.00000   2
+C3    CH3          0.00000   2
+ [ bonds ]
+;  ai    aj   gromos type
+; bonds
+;  NB
+;     6
+;  IB   JB  MCB
+C12     C11     gb_27
+C11     O12     gb_5
+C11     O11     gb_13
+O11     C1      gb_18
+C1      C2      gb_27
+C2      C3      gb_27
+ [ angles ]
+;  ai    aj    ak   gromos type
+; bond angles
+; NBA
+;     6
+;  IB   JB   KB  MCB
+C12     C11     O12     ga_35
+C12     C11     O11     ga_16
+O12     C11     O11     ga_31
+C11     O11     C1      ga_22
+O11     C1      C2      ga_15
+C1      C2      C3      ga_15
+ [ impropers ]
+;  ai    aj    ak    al   gromos type
+; improper dihedrals
+; NIDA
+; 
+;  IB   JB   KB   LB  MCB
+C11     C12     O12     O11     gi_1
+ [ dihedrals ]
+;  ai    aj    ak    al   gromos type
+; dihedrals
+; NDA
+;     3
+;  IB   JB   KB   LB  MCB
+C12     C11     O11     C1      gd_12
+C11     O11     C1      C2      gd_29
+O11     C1      C2      C3      gd_34
+;
+;MTBUILDBLSOLUTE
+;@BLOCKTYPE 2016H66_orga.mtb BLK BAE SOL TYPE MOLE NAME butylacetate
+; building block (residue, nucleotide, etc.)
+; RNME
+[ BAE ]
+; number of atoms, number of preceding exclusions
+; NMAT NLIN
+;    8    0
+ [ atoms ]
+; atoms
+;ATOM ANM  IACM MASS        CGMICGM MAE MSAE
+C12   CH3          0.00000   0
+C11   C            0.63000   1
+O12   O           -0.55000   1
+O11   OE          -0.37000   1
+C1    CH2          0.29000   1
+C2    CH2          0.00000   2
+C3    CH2          0.00000   2
+C4    CH3          0.00000   2
+ [ bonds ]
+;  ai    aj   gromos type
+; bonds
+;  NB
+;     7
+;  IB   JB  MCB
+C12     C11     gb_27
+C11     O12     gb_5
+C11     O11     gb_13
+O11     C1      gb_18
+C1      C2      gb_27
+C2      C3      gb_27
+C3      C4      gb_27
+ [ angles ]
+;  ai    aj    ak   gromos type
+; bond angles
+; NBA
+;     7
+;  IB   JB   KB  MCB
+C12     C11     O12     ga_35
+C12     C11     O11     ga_16
+O12     C11     O11     ga_31
+C11     O11     C1      ga_22
+O11     C1      C2      ga_15
+C1      C2      C3      ga_15
+C2      C3      C4      ga_15
+ [ impropers ]
+;  ai    aj    ak    al   gromos type
+; improper dihedrals
+; NIDA
+; 
+;  IB   JB   KB   LB  MCB
+C11     C12     O12     O11     gi_1
+ [ dihedrals ]
+;  ai    aj    ak    al   gromos type
+; dihedrals
+; NDA
+;     4
+;  IB   JB   KB   LB  MCB
+C12     C11     O11     C1      gd_12
+C11     O11     C1      C2      gd_29
+O11     C1      C2      C3      gd_34
+C1      C2      C3      C4      gd_34
+;
+;MTBUILDBLSOLUTE
+;@BLOCKTYPE 2016H66_orga.mtb BLK EAN SOL TYPE MOLE NAME ethylamine
+; building block (residue, nucleotide, etc.)
+; RNME
+[ EAN ]
+; number of atoms, number of preceding exclusions
+; NMAT NLIN
+;    5    0
+ [ atoms ]
+; atoms
+;ATOM ANM  IACM MASS        CGMICGM MAE MSAE
+C1    CH3          0.00000   0
+C2    CH2          0.25000   1
+N1    NT          -0.98000   1
+H1    H            0.36500   1
+H2    H            0.36500   1
+ [ bonds ]
+;  ai    aj   gromos type
+; bonds
+;  NB
+;     4
+;  IB   JB  MCB
+C1      C2      gb_27
+C2      N1      gb_21
+N1      H1      gb_2
+N1      H2      gb_2
+ [ angles ]
+;  ai    aj    ak   gromos type
+; bond angles
+; NBA
+;     4
+;  IB   JB   KB  MCB
+C1      C2      N1      ga_15
+C2      N1      H1      ga_11
+C2      N1      H2      ga_11
+H1      N1      H2      ga_10
+ [ impropers ]
+;  ai    aj    ak    al   gromos type
+; improper dihedrals
+; NIDA
+; 
+;  IB   JB   KB   LB  MCB
+ [ dihedrals ]
+;  ai    aj    ak    al   gromos type
+; dihedrals
+; NDA
+;     1
+;  IB   JB   KB   LB  MCB
+C1      C2      N1      H1      gd_29
+;
+;MTBUILDBLSOLUTE
+;@BLOCKTYPE 2016H66_orga.mtb BLK PAN SOL TYPE MOLE NAME propylamine
+; building block (residue, nucleotide, etc.)
+; RNME
+[ PAN ]
+; number of atoms, number of preceding exclusions
+; NMAT NLIN
+;    6    0
+ [ atoms ]
+; atoms
+;ATOM ANM  IACM MASS        CGMICGM MAE MSAE
+N1    NT          -0.98000   0
+H1    H            0.36500   0
+H2    H            0.36500   0
+C1    CH2          0.25000   0
+C2    CH2          0.00000   1
+C3    CH3          0.00000   1
+ [ bonds ]
+;  ai    aj   gromos type
+; bonds
+;  NB
+;     5
+;  IB   JB  MCB
+N1      H1      gb_2
+N1      H2      gb_2
+N1      C1      gb_21
+C1      C2      gb_27
+C2      C3      gb_27
+ [ angles ]
+;  ai    aj    ak   gromos type
+; bond angles
+; NBA
+;     5
+;  IB   JB   KB  MCB
+H1      N1      H2      ga_10
+H1      N1      C1      ga_11
+H2      N1      C1      ga_11
+N1      C1      C2      ga_15
+C1      C2      C3      ga_15
+ [ impropers ]
+;  ai    aj    ak    al   gromos type
+; improper dihedrals
+; NIDA
+; 
+;  IB   JB   KB   LB  MCB
+ [ dihedrals ]
+;  ai    aj    ak    al   gromos type
+; dihedrals
+; NDA
+;     2
+;  IB   JB   KB   LB  MCB
+H1      N1      C1      C2      gd_29
+N1      C1      C2      C3      gd_34
+;
+;MTBUILDBLSOLUTE
+;@BLOCKTYPE 2016H66_orga.mtb BLK BAN SOL TYPE MOLE NAME butylamine
+; building block (residue, nucleotide, etc.)
+; RNME
+[ BAN ]
+; number of atoms, number of preceding exclusions
+; NMAT NLIN
+;    7    0
+ [ atoms ]
+; atoms
+;ATOM ANM  IACM MASS        CGMICGM MAE MSAE
+C1    CH3          0.00000   0
+C2    CH2          0.00000   1
+C3    CH2          0.00000   1
+C4    CH2          0.25000   2
+N1    NT          -0.98000   2
+H1    H            0.36500   2
+H2    H            0.36500   2
+ [ bonds ]
+;  ai    aj   gromos type
+; bonds
+;  NB
+;     6
+;  IB   JB  MCB
+C1      C2      gb_27
+C2      C3      gb_27
+C3      C4      gb_27
+C4      N1      gb_21
+N1      H1      gb_2
+N1      H2      gb_2
+ [ angles ]
+;  ai    aj    ak   gromos type
+; bond angles
+; NBA
+;     6
+;  IB   JB   KB  MCB
+C1      C2      C3      ga_15
+C2      C3      C4      ga_15
+C3      C4      N1      ga_15
+C4      N1      H1      ga_11
+C4      N1      H2      ga_11
+H1      N1      H2      ga_10
+ [ impropers ]
+;  ai    aj    ak    al   gromos type
+; improper dihedrals
+; NIDA
+; 
+;  IB   JB   KB   LB  MCB
+ [ dihedrals ]
+;  ai    aj    ak    al   gromos type
+; dihedrals
+; NDA
+;     3
+;  IB   JB   KB   LB  MCB
+C1      C2      C3      C4      gd_34
+C2      C3      C4      N1      gd_34
+C3      C4      N1      H1      gd_29
+;
+;MTBUILDBLSOLUTE
+;@BLOCKTYPE 2016H66_orga.mtb BLK DEAN SOL TYPE MOLE NAME diethylamine
+; building block (residue, nucleotide, etc.)
+; RNME
+[ DEAN ]
+; number of atoms, number of preceding exclusions
+; NMAT NLIN
+;    6    0
+ [ atoms ]
+; atoms
+;ATOM ANM  IACM MASS        CGMICGM MAE MSAE
+C1    CH3          0.00000   0
+C2    CH2          0.25000   1
+N1    NT          -0.86500   1
+H1    H            0.36500   1
+C3    CH2          0.25000   1
+C4    CH3          0.00000   2
+ [ bonds ]
+;  ai    aj   gromos type
+; bonds
+;  NB
+;     5
+;  IB   JB  MCB
+C1      C2      gb_27
+C2      N1      gb_21
+N1      H1      gb_2
+N1      C3      gb_21
+C3      C4      gb_27
+ [ angles ]
+;  ai    aj    ak   gromos type
+; bond angles
+; NBA
+;     5
+;  IB   JB   KB  MCB
+C1      C2      N1      ga_15
+C2      N1      H1      ga_11
+C2      N1      C3      ga_15 ; changed because cannot be 11
+H1      N1      C3      ga_11
+N1      C3      C4      ga_15
+ [ impropers ]
+;  ai    aj    ak    al   gromos type
+; improper dihedrals
+; NIDA
+; 
+;  IB   JB   KB   LB  MCB
+ [ dihedrals ]
+;  ai    aj    ak    al   gromos type
+; dihedrals
+; NDA
+;     2
+;  IB   JB   KB   LB  MCB
+C1      C2      N1      C3      gd_34
+C2      N1      C3      C4      gd_34
+;
+;MTBUILDBLSOLUTE
+;@BLOCKTYPE 2016H66_orga.mtb BLK TEAN SOL TYPE MOLE NAME triethylamine
+; building block (residue, nucleotide, etc.)
+; RNME
+[ TEAN ]
+; number of atoms, number of preceding exclusions
+; NMAT NLIN
+;    7    0
+ [ atoms ]
+; atoms
+;ATOM ANM  IACM MASS        CGMICGM MAE MSAE
+N1    NT          -0.75000   0
+C1    CH2          0.25000   0
+C2    CH2          0.25000   0
+C3    CH2          0.25000   0
+C4    CH3          0.00000   1
+C5    CH3          0.00000   2
+C6    CH3          0.00000   3
+ [ bonds ]
+;  ai    aj   gromos type
+; bonds
+;  NB
+;     6
+;  IB   JB  MCB
+N1      C1      gb_21
+N1      C2      gb_21
+N1      C3      gb_21
+C1      C4      gb_27
+C2      C5      gb_27
+C3      C6      gb_27
+ [ angles ]
+;  ai    aj    ak   gromos type
+; bond angles
+; NBA
+;     6
+;  IB   JB   KB  MCB
+C1      N1      C2      ga_15
+C1      N1      C3      ga_15
+C2      N1      C3      ga_15
+N1      C1      C4      ga_15
+N1      C2      C5      ga_15
+N1      C3      C6      ga_15
+ [ impropers ]
+;  ai    aj    ak    al   gromos type
+; improper dihedrals
+; NIDA
+; 
+;  IB   JB   KB   LB  MCB
+ [ dihedrals ]
+;  ai    aj    ak    al   gromos type
+; dihedrals
+; NDA
+;     3
+;  IB   JB   KB   LB  MCB
+C2      N1      C1      C4      gd_34
+C1      N1      C2      C5      gd_34
+C1      N1      C3      C6      gd_34
+;
+;MTBUILDBLSOLUTE
+;@BLOCKTYPE 2016H66_orga.mtb BLK EDAN SOL TYPE MOLE NAME ethylenediamine
+; building block (residue, nucleotide, etc.)
+; RNME
+[ EDAN ]
+; number of atoms, number of preceding exclusions
+; NMAT NLIN
+;    8    0
+ [ atoms ]
+; atoms
+;ATOM ANM  IACM MASS        CGMICGM MAE MSAE
+HA1   H            0.36500   0
+HA2   H            0.36500   0
+NA    NT          -0.98000   0
+CA    CH2          0.25000   0
+CB    CH2          0.25000   1
+NB    NT          -0.98000   1
+HB1   H            0.36500   1
+HB2   H            0.36500   1
+ [ bonds ]
+;  ai    aj   gromos type
+; bonds
+;  NB
+;     7
+;  IB   JB  MCB
+HA1     NA      gb_2
+HA2     NA      gb_2
+NA      CA      gb_21
+CA      CB      gb_27
+CB      NB      gb_21
+NB      HB1     gb_2
+NB      HB2     gb_2
+ [ angles ]
+;  ai    aj    ak   gromos type
+; bond angles
+; NBA
+;     8
+;  IB   JB   KB  MCB
+HA1     NA      HA2     ga_10
+HA1     NA      CA      ga_11
+HA2     NA      CA      ga_11
+NA      CA      CB      ga_15
+CA      CB      NB      ga_15
+CB      NB      HB1     ga_11
+CB      NB      HB2     ga_11
+HB1     NB      HB2     ga_10
+ [ impropers ]
+;  ai    aj    ak    al   gromos type
+; improper dihedrals
+; NIDA
+; 
+;  IB   JB   KB   LB  MCB
+ [ dihedrals ]
+;  ai    aj    ak    al   gromos type
+; dihedrals
+; NDA
+;     3
+;  IB   JB   KB   LB  MCB
+HA1     NA      CA      CB      gd_29
+NA      CA      CB      NB      gd_34
+CA      CB      NB      HB1     gd_29
+;
+;MTBUILDBLSOLUTE
+;@BLOCKTYPE 2016H66_orga.mtb BLK ETSH SOL TYPE MOLE NAME ethanethiol
+; building block (residue, nucleotide, etc.)
+; RNME
+[ ETSH ]
+; number of atoms, number of preceding exclusions
+; NMAT NLIN
+;    4    0
+ [ atoms ]
+; atoms
+;ATOM ANM  IACM MASS        CGMICGM MAE MSAE
+H1    H            0.22000   0
+S1    S           -0.37000   0
+C1    CH2          0.15000   0
+C2    CH3          0.00000   1
+ [ bonds ]
+;  ai    aj   gromos type
+; bonds
+;  NB
+;     3
+;  IB   JB  MCB
+H1      S1      gb_8
+S1      C1      gb_32
+C1      C2      gb_27
+ [ angles ]
+;  ai    aj    ak   gromos type
+; bond angles
+; NBA
+;     2
+;  IB   JB   KB  MCB
+H1      S1      C1      ga_3
+S1      C1      C2      ga_16
+ [ impropers ]
+;  ai    aj    ak    al   gromos type
+; improper dihedrals
+; NIDA
+; 
+;  IB   JB   KB   LB  MCB
+ [ dihedrals ]
+;  ai    aj    ak    al   gromos type
+; dihedrals
+; NDA
+;     1
+;  IB   JB   KB   LB  MCB
+H1      S1      C1      C2      gd_26
+;
+;MTBUILDBLSOLUTE
+;@BLOCKTYPE 2016H66_orga.mtb BLK PRSH SOL TYPE MOLE NAME propanethiol
+; building block (residue, nucleotide, etc.)
+; RNME
+[ PRSH ]
+; number of atoms, number of preceding exclusions
+; NMAT NLIN
+;    5    0
+ [ atoms ]
+; atoms
+;ATOM ANM  IACM MASS        CGMICGM MAE MSAE
+H1    H            0.22000   0
+S1    S           -0.37000   0
+C1    CH2          0.15000   0
+C2    CH2          0.00000   1
+C3    CH3          0.00000   1
+ [ bonds ]
+;  ai    aj   gromos type
+; bonds
+;  NB
+;     4
+;  IB   JB  MCB
+H1      S1      gb_8
+S1      C1      gb_32
+C1      C2      gb_27
+C2      C3      gb_27
+ [ angles ]
+;  ai    aj    ak   gromos type
+; bond angles
+; NBA
+;     3
+;  IB   JB   KB  MCB
+H1      S1      C1      ga_3
+S1      C1      C2      ga_16
+C1      C2      C3      ga_15
+ [ impropers ]
+;  ai    aj    ak    al   gromos type
+; improper dihedrals
+; NIDA
+; 
+;  IB   JB   KB   LB  MCB
+ [ dihedrals ]
+;  ai    aj    ak    al   gromos type
+; dihedrals
+; NDA
+;     2
+;  IB   JB   KB   LB  MCB
+H1      S1      C1      C2      gd_26
+S1      C1      C2      C3      gd_31
+;
+;MTBUILDBLSOLUTE
+;@BLOCKTYPE 2016H66_orga.mtb BLK BTSH SOL TYPE MOLE NAME butanethiol
+; building block (residue, nucleotide, etc.)
+; RNME
+[ BTSH ]
+; number of atoms, number of preceding exclusions
+; NMAT NLIN
+;    6    0
+ [ atoms ]
+; atoms
+;ATOM ANM  IACM MASS        CGMICGM MAE MSAE
+H1    H            0.22000   0
+S1    S           -0.37000   0
+C1    CH2          0.15000   0
+C2    CH2          0.00000   1
+C3    CH2          0.00000   1
+C4    CH3          0.00000   1
+ [ bonds ]
+;  ai    aj   gromos type
+; bonds
+;  NB
+;     5
+;  IB   JB  MCB
+H1      S1      gb_8
+S1      C1      gb_32
+C1      C2      gb_27
+C2      C3      gb_27
+C3      C4      gb_27
+ [ angles ]
+;  ai    aj    ak   gromos type
+; bond angles
+; NBA
+;     4
+;  IB   JB   KB  MCB
+H1      S1      C1      ga_3
+S1      C1      C2      ga_16
+C1      C2      C3      ga_15
+C2      C3      C4      ga_15
+ [ impropers ]
+;  ai    aj    ak    al   gromos type
+; improper dihedrals
+; NIDA
+; 
+;  IB   JB   KB   LB  MCB
+ [ dihedrals ]
+;  ai    aj    ak    al   gromos type
+; dihedrals
+; NDA
+;     3
+;  IB   JB   KB   LB  MCB
+H1      S1      C1      C2      gd_26
+S1      C1      C2      C3      gd_31
+C1      C2      C3      C4      gd_34
+;
+;MTBUILDBLSOLUTE
+;@BLOCKTYPE 2016H66_orga.mtb BLK DES SOL TYPE MOLE NAME diethylsulfide
+; building block (residue, nucleotide, etc.)
+; RNME
+[ DES ]
+; number of atoms, number of preceding exclusions
+; NMAT NLIN
+;    5    0
+ [ atoms ]
+; atoms
+;ATOM ANM  IACM MASS        CGMICGM MAE MSAE
+C1    CH3          0.00000   0
+C2    CH2          0.21500   1
+S1    S           -0.43000   1
+C3    CH2          0.21500   1
+C4    CH3          0.00000   2
+ [ bonds ]
+;  ai    aj   gromos type
+; bonds
+;  NB
+;     4
+;  IB   JB  MCB
+C1      C2      gb_27
+C2      S1      gb_32
+S1      C3      gb_32
+C3      C4      gb_27
+ [ angles ]
+;  ai    aj    ak   gromos type
+; bond angles
+; NBA
+;     3
+;  IB   JB   KB  MCB
+C1      C2      S1      ga_16
+C2      S1      C3      ga_4
+S1      C3      C4      ga_16
+ [ impropers ]
+;  ai    aj    ak    al   gromos type
+; improper dihedrals
+; NIDA
+; 
+;  IB   JB   KB   LB  MCB
+ [ dihedrals ]
+;  ai    aj    ak    al   gromos type
+; dihedrals
+; NDA
+;     2
+;  IB   JB   KB   LB  MCB
+C1      C2      S1      C3      gd_26
+C2      S1      C3      C4      gd_26
+;
+;MTBUILDBLSOLUTE
+;@BLOCKTYPE 2016H66_orga.mtb BLK DMDS SOL TYPE MOLE NAME dimethyldisulfide
+; building block (residue, nucleotide, etc.)
+; RNME
+[ DMDS ]
+; number of atoms, number of preceding exclusions
+; NMAT NLIN
+;    4    0
+ [ atoms ]
+; atoms
+;ATOM ANM  IACM MASS        CGMICGM MAE MSAE
+C1    CH3          0.15000   0
+S1    S           -0.15000   0
+S2    S           -0.15000   0
+C2    CH3          0.15000   0
+ [ bonds ]
+;  ai    aj   gromos type
+; bonds
+;  NB
+;     3
+;  IB   JB  MCB
+C1      S1      gb_31
+S1      S2      gb_36
+S2      C2      gb_31
+ [ angles ]
+;  ai    aj    ak   gromos type
+; bond angles
+; NBA
+;     2
+;  IB   JB   KB  MCB
+C1      S1      S2      ga_6
+S1      S2      C2      ga_6
+ [ impropers ]
+;  ai    aj    ak    al   gromos type
+; improper dihedrals
+; NIDA
+; 
+;  IB   JB   KB   LB  MCB
+ [ dihedrals ]
+;  ai    aj    ak    al   gromos type
+; dihedrals
+; NDA
+;     1
+;  IB   JB   KB   LB  MCB
+C1      S1      S2      C2      gd_21
+;
+;MTBUILDBLSOLUTE
+;@BLOCKTYPE 2016H66_orga.mtb BLK DMS SOL TYPE MOLE NAME dimethylsulfide
+; building block (residue, nucleotide, etc.)
+; RNME
+[ DMS ]
+; number of atoms, number of preceding exclusions
+; NMAT NLIN
+;    3    0
+ [ atoms ]
+; atoms
+;ATOM ANM  IACM MASS        CGMICGM MAE MSAE
+C1    CH3          0.21500   0
+S1    S           -0.43000   0
+C2    CH3          0.21500   0
+ [ bonds ]
+;  ai    aj   gromos type
+; bonds
+;  NB
+;     2
+;  IB   JB  MCB
+C1      S1      gb_31
+S1      C2      gb_31
+ [ angles ]
+;  ai    aj    ak   gromos type
+; bond angles
+; NBA
+;     1
+;  IB   JB   KB  MCB
+C1      S1      C2      ga_4
+ [ impropers ]
+;  ai    aj    ak    al   gromos type
+; improper dihedrals
+; NIDA
+; 
+;  IB   JB   KB   LB  MCB
+ [ dihedrals ]
+;  ai    aj    ak    al   gromos type
+; dihedrals
+; NDA
+;     0
+;  IB   JB   KB   LB  MCB
+;
+;MTBUILDBLSOLUTE
+;@BLOCKTYPE 2016H66_orga.mtb BLK EMS SOL TYPE MOLE NAME ethylmethylsulfide
+; building block (residue, nucleotide, etc.)
+; RNME
+[ EMS ]
+; number of atoms, number of preceding exclusions
+; NMAT NLIN
+;    4    0
+ [ atoms ]
+; atoms
+;ATOM ANM  IACM MASS        CGMICGM MAE MSAE
+C1    CH3          0.00000   0
+C2    CH2          0.21500   1
+S1    S           -0.43000   1
+C3    CH3          0.21500   1
+ [ bonds ]
+;  ai    aj   gromos type
+; bonds
+;  NB
+;     3
+;  IB   JB  MCB
+C1      C2      gb_27
+C2      S1      gb_32
+S1      C3      gb_31
+ [ angles ]
+;  ai    aj    ak   gromos type
+; bond angles
+; NBA
+;     2
+;  IB   JB   KB  MCB
+C1      C2      S1      ga_16
+C2      S1      C3      ga_4
+ [ impropers ]
+;  ai    aj    ak    al   gromos type
+; improper dihedrals
+; NIDA
+; 
+;  IB   JB   KB   LB  MCB
+ [ dihedrals ]
+;  ai    aj    ak    al   gromos type
+; dihedrals
+; NDA
+;     1
+;  IB   JB   KB   LB  MCB
+C1      C2      S1      C3      gd_26
+;
