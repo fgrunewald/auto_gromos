@@ -9,7 +9,7 @@ CHnC "CH0|CH1|CH2|CH3|C"
 0 { "atype": "OA", "order": 1} 
 1 { "atype": "H", "order": 1} 
 [ bonds ]
-+0 +1 2 gb_1 {"type": "1", "commnet": "OA-H" } 
++0 +1 2 gb_1 {"type": "1", "comment": "OA-H" } 
 
 ; 2_bonds_0 
 [ link ]

@@ -11,6 +11,7 @@ def gen_bonded_interactions(molecule):
     """
     mol, atomnames = delete_atomname(molecule)
 
+    resids = nx.get_node_attributes(mol, "resid")
     nx.set_node_attributes(mol, {node: 1 for node in mol.nodes}, "resid")
 
     mol = AssignFunctionalGroups().run_molecule(mol)
@@ -20,5 +21,6 @@ def gen_bonded_interactions(molecule):
     mol = RemoveDuplicates().run_molecule(mol)
 
     nx.set_node_attributes(mol, atomnames, "atomname")
+    nx.set_node_attributes(mol, resids, "resid")
 
     return molecule
