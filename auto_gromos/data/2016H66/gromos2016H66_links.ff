@@ -449,15 +449,6 @@ CHnC "CH0|CH1|CH2|CH3|C"
 [ angles ]
 +0 +1 +2 2 ga_16 {"type": "16", "comment":"CHn-CH2-S" } 
 
-; 16_angles_1
-[ link ]
-[ atoms ]
-0 { "atype": $CHnC , "order": 1 } 
-1 { "atype": "C", "order": 1 } 
-2 { "atype": "OE|OA", "order": 1 } 
-[ angles ]
-+0 +1 +2 2 ga_16 {"type": "16", "comment":"CHn,C-C-OA,OE" } 
-
 ; 18_angles_0 
 [ link ]
 [ atoms ]
@@ -485,15 +476,6 @@ CHnC "CH0|CH1|CH2|CH3|C"
 [ angles ]
 +0 +1 +2 2 ga_20 {"type": "20", "comment": "H-NE-CH2" } 
 
-; 21_angles_0 
-[ link ]
-[ atoms ]
-0 { "atype": "CH2", "order": 1 } 
-1 { "atype": "N", "order": 1 } 
-2 { "atype": "CH1", "order": 1 } 
-[ angles ]
-+0 +1 +2 2 ga_21 {"type": "21", "comment": "CH2-N-CH1" } 
-
 ; 21_angles_1
 [ link ]
 [ atoms ]
@@ -502,6 +484,15 @@ CHnC "CH0|CH1|CH2|CH3|C"
 2 { "atype": "CH1|CH2|CH3|HC|C", "order": 1 } 
 [ angles ]
 +0 +1 +2 2 ga_21 {"type": "21", "comment":"CHn-C-CHn,C,HC" } 
+
+; 21_angles_0 
+[ link ]
+[ atoms ]
+0 { "atype": "CH2", "order": 1 } 
+1 { "atype": "N", "order": 1 } 
+2 { "atype": "CH1", "order": 1 } 
+[ angles ]
++0 +1 +2 2 ga_21 {"type": "21", "comment": "CH2-N-CH1" } 
 
 ; 22_angles_0 
 [ link ]
@@ -620,13 +611,12 @@ CHnC "CH0|CH1|CH2|CH3|C"
 [ angles ]
 +0 +1 +2 2 ga_31 {"type": "31", "comment":"CH1,CH2-N-C" } 
 
-
 ; 31_angles_1 
 [ link ]
 [ atoms ]
-0 { "atype": "O", "order": 1 } 
-1 { "atype": "C", "order": 1 } 
-2 { "atype": "OA|OE|CH2|CH1|CH3", "order": 1 } 
+0 { "atype": "O", "order": 1, "fgroup":"ketone|ester|carboxylic-acid" } 
+1 { "atype": "C", "order": 1, "fgroup":"ketone|ester|carboxylic-acid" } 
+2 { "atype": "OA|OE|CH2|CH1|CH3", "order": 1, "fgroup":"ketone|ester|carboxylic-acid" } 
 [ angles ]
 +0 +1 +2 2 ga_31 {"type": "31", "comment":"O-C-OA,OE,CHn" } 
 
@@ -643,9 +633,18 @@ CHnC "CH0|CH1|CH2|CH3|C"
 ; 33_angles_0 
 [ link ]
 [ atoms ]
-0 { "atype": "O", "order": 1 } 
-1 { "atype": "C", "order": 1 } 
-2 { "atype": "OA|N|NL|NT", "order": 1 } 
+0 { "atype": "O", "order": 1, "fgroup":"aldehyde"} 
+1 { "atype": "C", "order": 1,  "fgroup":"aldehyde" } 
+2 { "atype": "OA|N|NL|NT", "order": 1,  "fgroup":"aldehyde" } 
+[ angles ]
++0 +1 +2 2 ga_33 {"type": "33", "comment":"O-C-OA,N,NL,NT" } 
+
+; 33_angles_0 
+[ link ]
+[ atoms ]
+0 { "atype": "O", "order": 1} 
+1 { "atype": "C", "order": 1  } 
+2 { "atype": "N|NL|NT", "order": 1 } 
 [ angles ]
 +0 +1 +2 2 ga_33 {"type": "33", "comment":"O-C-OA,N,NL,NT" } 
 
@@ -666,6 +665,15 @@ CHnC "CH0|CH1|CH2|CH3|C"
 2 { "atype": $CHn , "order": 1, "fgroup":"aldehyde" } 
 [ angles ]
 +0 +1 +2 2 ga_33 {"type": "33", "comment":"O-C-CHn aldehyde" } 
+
+; 16_angles_1
+[ link ]
+[ atoms ]
+0 { "atype": $CHnC , "order": 1, "fgroup":"carboxylic-acid|ester" } 
+1 { "atype": "C", "order": 1 , "fgroup":"carboxylic-acid|ester"} 
+2 { "atype": "OE|OA", "order": 1 , "fgroup":"carboxylic-acid|ester"} 
+[ angles ]
++0 +1 +2 2 ga_16 {"type": "16", "comment":"CHn,C-C-OA,OE" } 
 
 ; 35_angles_0
 [ link ]

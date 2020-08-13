@@ -2377,3 +2377,319 @@ C2      S1      C3      ga_4
 ;  IB   JB   KB   LB  MCB
 C1      C2      S1      C3      gd_26
 ;
+
+
+;MTBUILDBLSOLUTE
+;@BLOCKTYPE 2016H66_orga.mtb BLK PPA SOL TYPE MOLE NAME propanoic acid
+; building block (residue, nucleotide, etc.)
+; RNME
+[ PPA ]
+; number of atoms, number of preceding exclusions
+; NMAT NLIN
+;    6    0
+ [ atoms ]
+; atoms
+;ATOM ANM  IACM MASS        CGMICGM MAE MSAE
+C1    C            0.55000   0
+O1    O           -0.55000   0
+O2    OA          -0.41000   1
+H1    H            0.41000   1
+C2    CH2          0.00000   2
+C3    CH3          0.00000   2
+ [ bonds ]
+;  ai    aj   gromos type
+; bonds
+;  NB
+;     5
+;  IB   JB  MCB
+C1      O1      gb_5
+C1      O2      gb_13
+C1      C2      gb_27
+O2      H1      gb_1
+C2      C3      gb_27
+ [ angles ]
+;  ai    aj    ak   gromos type
+; bond angles
+; NBA
+;     5
+;  IB   JB   KB  MCB
+O1      C1      O2      ga_31
+O1      C1      C2      ga_35
+O2      C1      C2      ga_16
+C1      O2      H1      ga_12
+C1      C2      C3      ga_15
+ [ impropers ]
+;  ai    aj    ak    al   gromos type
+; improper dihedrals
+; NIDA
+; 
+;  IB   JB   KB   LB  MCB
+C1      O1      O2      C2      gi_1
+ [ dihedrals ]
+;  ai    aj    ak    al   gromos type
+; dihedrals
+; NDA
+;  IB   JB   KB   LB  MCB
+O1      C1      O2      H1      gd_12
+O1      C1      C2      C3      gd_40
+
+[ BTA ]
+; number of atoms, number of preceding exclusions
+; NMAT NLIN
+;    7    0
+ [ atoms ]
+; atoms
+;ATOM ANM  IACM MASS        CGMICGM MAE MSAE
+C1    C            0.55000   0
+O1    O           -0.55000   0
+O2    OA          -0.41000   1
+H1    H            0.41000   1
+C2    CH2          0.00000   2
+C3    CH2          0.00000   2
+C4    CH3          0.00000   2
+ [ bonds ]
+;  ai    aj   gromos type
+; bonds
+;  NB
+;     6
+;  IB   JB  MCB
+C1      O1      gb_5
+C1      O2      gb_13
+C1      C2      gb_27
+O2      H1      gb_1
+C2      C3      gb_27
+C3      C4      gb_27
+ [ angles ]
+;  ai    aj    ak   gromos type
+; bond angles
+; NBA
+;     6
+;  IB   JB   KB  MCB
+O1      C1      O2      ga_31
+O1      C1      C2      ga_35
+O2      C1      C2      ga_16
+C1      O2      H1      ga_12
+C1      C2      C3      ga_15
+C2      C3      C4      ga_15
+ [ impropers ]
+;  ai    aj    ak    al   gromos type
+; improper dihedrals
+; NIDA
+; 
+;  IB   JB   KB   LB  MCB
+C1      O1      O2      C2      gi_1
+ [ dihedrals ]
+O1      C1      O2      H1      gd_12
+O1      C1      C2      C3      gd_40
+C1      C2      C3      C4      gd_34
+
+
+[ ACA ]
+; number of atoms, number of preceding exclusions
+; NMAT NLIN
+;    5    0
+ [ atoms ]
+; atoms
+;ATOM ANM  IACM MASS        CGMICGM MAE MSAE
+C1    CH3          0.00000   0
+C2    C            0.55000   1
+O1    O           -0.55000   1
+O2    OA          -0.41000   2
+H1    H            0.41000   2
+ [ bonds ]
+;  ai    aj   gromos type
+; bonds
+;  NB
+;     4
+;  IB   JB  MCB
+C1      C2      gb_27
+C2      O1      gb_5
+C2      O2      gb_13
+O2      H1      gb_1
+ [ angles ]
+;  ai    aj    ak   gromos type
+; bond angles
+; NBA
+;     4
+;  IB   JB   KB  MCB
+C1      C2      O1      ga_35
+C1      C2      O2      ga_16
+O1      C2      O2      ga_31
+C2      O2      H1      ga_12
+ [ impropers ]
+;  ai    aj    ak    al   gromos type
+; improper dihedrals
+; NIDA
+; 
+;  IB   JB   KB   LB  MCB
+C2      C1      O1      O2      gi_1
+ [ dihedrals ]
+;  ai    aj    ak    al   gromos type
+; dihedrals
+; NDA
+;     1
+;  IB   JB   KB   LB  MCB
+C1      C2      O2      H1      gd_12
+;
+
+;MTBUILDBLSOLUTE
+;@BLOCKTYPE 2016H66_orga.mtb BLK AMD SOL TYPE MOLE NAME acetamide
+; building block (residue, nucleotide, etc.)
+; RNME
+[ AMD ]
+; number of atoms, number of preceding exclusions
+; NMAT NLIN
+;    6    0
+ [ atoms ]
+; atoms
+;ATOM ANM  IACM MASS        CGMICGM MAE MSAE
+C1    CH3          0.00000   0
+C2    C            0.54000   1
+O1    O           -0.54000   1
+N1    N           -0.76000   2
+H1    H            0.38000   2
+H2    H            0.38000   2
+ [ bonds ]
+;  ai    aj   gromos type
+; bonds
+;  NB
+;     5
+;  IB   JB  MCB
+C1      C2      gb_27
+C2      O1      gb_5
+C2      N1      gb_10
+N1      H1      gb_2
+N1      H2      gb_2
+ [ angles ]
+;  ai    aj    ak   gromos type
+; bond angles
+; NBA
+;     6
+;  IB   JB   KB  MCB
+C1      C2      O1      ga_30
+C1      C2      N1      ga_19
+O1      C2      N1      ga_33
+C2      N1      H1      ga_32
+C2      N1      H2      ga_32
+H1      N1      H2      ga_24
+ [ impropers ]
+;  ai    aj    ak    al   gromos type
+; improper dihedrals
+; NIDA
+; 
+;  IB   JB   KB   LB  MCB
+C2      C1      O1      N1      gi_1
+N1      C2      H1      H2      gi_1
+ [ dihedrals ]
+;  ai    aj    ak    al   gromos type
+C1      C2      N1      H1      gd_14
+
+
+;MTBUILDBLSOLUTE
+;@BLOCKTYPE 2016H66_orga.mtb BLK DAMD SOL TYPE MOLE NAME dimethylacetamide
+; building block (residue, nucleotide, etc.)
+; RNME
+[ DAMD ]
+; number of atoms, number of preceding exclusions
+; NMAT NLIN
+;    6    0
+ [ atoms ]
+; atoms
+;ATOM ANM  IACM MASS        CGMICGM MAE MSAE
+C1    CH3          0.00000   0
+C2    C            0.54000   1
+O1    O           -0.54000   1
+N1    N           -0.38000   2
+C3    CH3          0.19000   2
+C4    CH3          0.19000   2
+ [ bonds ]
+;  ai    aj   gromos type
+; bonds
+;  NB
+;     5
+;  IB   JB  MCB
+C1      C2      gb_27
+C2      O1      gb_5
+C2      N1      gb_10
+N1      C3      gb_21
+N1      C4      gb_21
+ [ angles ]
+;  ai    aj    ak   gromos type
+; bond angles
+; NBA
+;     6
+;  IB   JB   KB  MCB
+C1      C2      O1      ga_30
+C1      C2      N1      ga_19
+O1      C2      N1      ga_33
+C2      N1      C3      ga_22
+C2      N1      C4      ga_22
+C3      N1      C4      ga_30
+ [ impropers ]
+;  ai    aj    ak    al   gromos type
+; improper dihedrals
+; NIDA
+; 
+;  IB   JB   KB   LB  MCB
+C2      C1      N1      O1      gi_1
+N1      C2      C4      C3      gi_1
+ [ dihedrals ]
+;  ai    aj    ak    al   gromos type
+; dihedrals
+; NDA
+;     1
+;  IB   JB   KB   LB  MCB
+C1      C2      N1      C4      gd_14
+
+[ LNMA ]
+; number of atoms, number of preceding exclusions
+; NMAT NLIN
+;    6    0
+ [ atoms ]
+; atoms
+;ATOM ANM  IACM MASS        CGMICGM MAE MSAE
+C1    CH3          0.00000   0
+C2    C            0.54000   1
+O2    O           -0.54000   1
+N1    N           -0.50000   2
+H1    H            0.31000   2
+C3    CH3          0.19000   2
+ [ bonds ]
+;  ai    aj   gromos type
+; bonds
+;  NB
+;     5
+;  IB   JB  MCB
+C1      C2      gb_27
+C2      O2      gb_5
+C2      N1      gb_10
+N1      H1      gb_2
+N1      C3      gb_21
+ [ angles ]
+;  ai    aj    ak   gromos type
+; bond angles
+; NBA
+;     6
+;  IB   JB   KB  MCB
+C1      C2      O2      ga_30
+C1      C2      N1      ga_19
+O2      C2      N1      ga_33
+C2      N1      H1      ga_32
+C2      N1      C3      ga_22
+H1      N1      C3      ga_18
+ [ impropers ]
+;  ai    aj    ak    al   gromos type
+; improper dihedrals
+; NIDA
+; 
+;  IB   JB   KB   LB  MCB
+C2      C1      N1      O2      gi_1
+N1      C2      C3      H1      gi_1
+ [ dihedrals ]
+;  ai    aj    ak    al   gromos type
+; dihedrals
+; NDA
+;     1
+;  IB   JB   KB   LB  MCB
+
+C1      C2      N1      C3      gd_14

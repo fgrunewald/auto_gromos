@@ -40,6 +40,19 @@ name "aldehyde"
 +0 +3
 
 [ link ]
+name "ketone"
+[ atoms ]
+0  {"atype": "C", "order": 1}
+1  {"atype": "O", "order": 1}
+2  {"atype": "CH3|CH2|CH1|C", "order": 1}
+3  {"atype": "CH3|CH2|CH1|C", "order": 1}
+;
+[ edges ]
++0 +1
++0 +2
++0 +3
+
+[ link ]
 name "carboxylic-acid"
 [ atoms ]
 0    {"atype": "C", "order": 1}
