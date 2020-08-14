@@ -60,8 +60,8 @@ def test_gen_bonded_interactions(name, block):
            new_interactions = new_mol.interactions.get(inter_type, [])
            #print(interactions)
            #print(new_interactions)
-           for node in new_mol.nodes:
-               print(new_mol.nodes[node])
+           #for node in new_mol.nodes:
+           #    print(new_mol.nodes[node])
            print("ref", interactions)
            print("new", new_interactions)
            assert len(interactions) == len(new_interactions)
