@@ -25,6 +25,6 @@ def package_files(directory):
 setup(
     package_data={'': package_files('auto_gromos/data')
                   ,},
-    scripts=['bin/auto_gromos'],
+    scripts=['bin/gromos_to_vermouth'],
     pbr=True,
 )

@@ -1,0 +1,80 @@
+#!/usr/bin/env python3
+
+# Copyright 2020 University of Groningen
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#    http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+"""
+Perform the parsing and input redirect for the
+different subcommands. This is the main executable.
+"""
+from pathlib import Path
+import argparse
+from vermouth.forcefield import ForceField
+from vermouth.ffinput import read_ff
+import auto_gromos
+from auto_gromos import DATA_PATH
+from auto_gromos.gen_blocks import gen_block_gromos2016
+from auto_gromos.gen_links import gen_links_gromos2016
+
+VERSION = 'auto_gromos version {}'.format(auto_gromos.__version__)
+
+def main():
+    """
+    Parses commandline arguments and call relevant sub_programs.
+    """
+    parser = argparse.ArgumentParser(
+        formatter_class=argparse.ArgumentDefaultsHelpFormatter,
+    )
+
+    parser.add_argument('-V', '--version', action='version', version=VERSION)
+
+    parser.add_argument('-mons', required=True, nargs="+", dest="monomers",
+                         help="names of monomers")
+
+    parser.add_argument('-list-mons', action='store_true', dest='list_ff',
+                         help='all molecules for which links can be generated.')
+
+    parser.add_argument('-o', dest='outpath', type=Path, help='Output ITP (ITP)')
+
+    args = parser.parse_args()
+    # these should be moved outside the CLI but for now it's just a proof of principle
+    # workflow
+    graph_links = {("polyvinyl", "polyvinyl"):  ({"atomname": "VC2"}, {"atomname": "VC1"}),
+                   ("polyether", "polyether"): ({"atomname": "EC2"}, {"atomname": "EC1"}),
+                   ("polyvinyl", "polyether"):  ({"atomname": "VC2"}, {"atomname": "EC1"}),
+                   ("polyether", "polyvinyl"):  ({"atomname": "EC2"}, {"atomname": "VC1"})}
+
+    moltypes = {"PEO": "polyether",
+                "PPO": "polyether",
+                "PVA": "polyvinyl",
+                "PMMA": "polyvinyl",
+                "PVC": "polyvinyl",
+                "PE": "polyvinyl",
+                "PP": "polyvinyl",
+                "HEMA": "polyvinyl",
+                "MXMA": "polyvinyl",
+                "nBA": "polyvinyl",
+                "NIPAM": "polyvinyl",
+                "PMA": "polyvinyl"}
+
+    force_field = ForceField("gromos")
+    with open(DATA_PATH + "/2016H66/monomers.ff") as _file:
+        lines = _file.readlines()
+
+    read_ff(lines, force_field)
+    gen_block_gromos2016(force_field, args.monomers)
+    gen_links_gromos2016(force_field, args.monomers, graph_links, moltypes)
+
+if __name__ == '__main__':
+    main()

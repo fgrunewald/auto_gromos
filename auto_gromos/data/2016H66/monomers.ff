@@ -1,0 +1,220 @@
+[ moleculetype ]
+; Name   nrexcl
+PEO     3
+;
+[ atoms ]
+;  nr  type  resnr  resid  atom  cgnr  charge    mass    total_charge
+    1   CH2    1    PEO     EC1    1    0.29  14.0     ;  0.000
+    2    OE    1    PEO     O1    2   -0.58  16.0
+    3   CH2    1    PEO     EC2    3    0.29  14.0
+[ edges ]
+EC1 O1
+O1 EC2
+
+[ moleculetype ]
+; Name   nrexcl
+PE    3
+;
+[ atoms ]
+;  nr  type      resnr  resid  atom  cgnr  charge    mass    total_charge
+   1    CH2        1     PE     VC1    1      0.00     14.0
+   2    CH2        1     PE     VC2    1      0.00     14.0
+[edges]
+VC1 VC2
+[ moleculetype ]
+; Name   nrexcl
+PP    3
+;
+[ atoms ]
+;  nr  type      resnr  resid  atom  cgnr  charge    mass    total_charge
+   1    CH2        1     PP     VC1    1      0.00    14.0
+   2    CH1        1     PP     VC2    2      0.00    13.0
+   3    CH3        1     PP     SC3    3      0.00    15.0
+
+[ edges ]
+VC1  VC2
+VC2  SC3
+
+[ moleculetype ]
+; Name   nrexcl
+PPO     3
+;
+[ atoms ]
+;  nr  type  resnr  resid  atom  cgnr  charge    mass    total_charge
+    1   CH1    1    PPO     EC1    1   0.29   13.0        ;  0.000
+    2   CH3    1    PPO     SC1    2   0.00   15.0
+    3   O      1    PPO      O1    3  -0.58   16.0
+    4   CH2    1    PPO     EC2    4   0.29   14.0
+[edges]
+EC1 SC1
+EC1 O1
+O1  EC2
+
+[ moleculetype ]
+; Name   nrexcl
+PVA     3
+;
+[ atoms ]
+;  nr  type  resnr  resid  atom  cgnr  charge    mass    total_charge
+    1   CH2    1    PVA     VC1     1  0.00      14.0        ;  0.000
+    2   CH1    1    PVA     VC2     2  0.29      13.0  
+    3   OA     1    PVA     SC1     3 -0.70      16.0  
+    4   H      1    PVA     SC2     4  0.41      1.0  
+
+[edges]
+VC1 VC2
+VC2 SC1
+SC1 SC2
+
+[ moleculetype ]
+; Name   nrexcl
+PVC     3
+;
+[ atoms ]
+;  nr  type  resnr  resid  atom  cgnr  charge    mass    total_charge
+    1   CH2    1    PVC     VC1    1  0.00      14.0        ;  0.000
+    2   CH1    1    PVC     VC2    2  0.15      13.0  
+    3   CL     1    PVC     SC1    3 -0.15      32.0  
+[ edges ]
+VC1 VC2
+VC2 SC1
+
+[ moleculetype ]
+; Name   nrexcl
+PMMA     3
+;
+[ atoms ]
+;  nr  type  resnr  resid  atom  cgnr  charge    mass    total_charge
+    1   CH2    1    PMMA    VC1    1     0.00     14.0            ;  0.000
+    2   C      1    PMMA    VC2    2     0.00     12.0    
+    3   CH3    1    PMMA    SC1    3     0.00     15.0 
+    4   C      1    PMMA    SD1    4     0.63     12.0        
+    5   O      1    PMMA    SD2    5    -0.37     16.0
+    6   OE     1    PMMA    SD3    6    -0.55     16.0
+    7   CH3    1    PMMA    SD4    7     0.29     15.0
+;
+[ edges ]
+VC1  VC2
+VC2  SC1
+VC2  SD1
+SD1  SD2
+SD1  SD3
+SD3  SD4
+
+[ moleculetype ]
+HEMA 3
+
+[ atoms ]
+ 1 CH2 1 HEMA VC1 0   0.0 14.0
+ 2 CH1 1 HEMA VC2 0   0.0 13.0
+ 3 C   1 HEMA SC1 0  0.63 12.0
+ 4 O   1 HEMA SC2 0 -0.55 16.0
+ 5 OE  1 HEMA SC3 0 -0.37 16.0
+ 6 CH2 1 HEMA SC4 0   0.0 14.0
+ 7 CH2 1 HEMA SC5 0  0.29 14.0
+ 8 OA  1 HEMA SC6 0  -0.7 16.0
+ 9 H   1 HEMA SC7 0  0.41  1.0
+
+[ edges ]
+VC1  VC2
+VC2  SC1
+VC2  SC1
+SC1  SC2
+SC1  SC3
+SC3  SC4
+SC4  SC5
+SC5  SC6
+SC6  SC7
+
+[ moleculetype ]
+MXMA 3
+
+[ atoms ]
+ 1 CH2 1 MXMA VC1 0   0.0 14.0
+ 2 CH1 1 MXMA VC2 0   0.0 13.0
+ 3 C   1 MXMA SC1 0  0.63 12.0
+ 4 O   1 MXMA SC2 0 -0.55 16.0
+ 5 OE  1 MXMA SC3 0 -0.37 16.0
+ 8 CH2 1 MXMA SC4 0  0.29 14.0
+ 9 CH2 1 MXMA SC5 0   0.0 14.0
+ 7 OE  1 MXMA SC6 0 -0.58 16.0
+ 6 CH3 1 MXMA SC7 0  0.29 15.0
+
+
+[ edges ]
+VC1  VC2
+VC2  SC1
+VC2  SC1
+SC1  SC2
+SC1  SC3
+SC3  SC4
+SC4  SC5
+SC5  SC6
+SC6  SC7
+
+[ moleculetype ]
+PMA 3
+
+[ atoms ]
+ 1 CH2 1 PMA VC1 1   0.0 14.0
+ 2 CH1 1 PMA VC2 2   0.0 13.0
+ 3 C   1 PMA SC1 3  0.63 12.0
+ 4 O   1 PMA SC2 4 -0.55 16.0
+ 5 OE  1 PMA SC3 5 -0.37 16.0
+ 6 CH3 1 PMA SC4  6   0.0 15.0
+
+[ edges ]
+VC1  VC2
+VC2  SC1
+VC2  SC1
+SC1  SC2
+SC1  SC3
+SC3  SC4
+
+[ moleculetype ]
+nBA 3
+
+[ atoms ]
+ 1 CH2 1 nBA VC1  0   0.0   14.0
+ 2 CH1 1 nBA VC2  0   0.0   13.0
+ 3 C   1 nBA SC1  0  0.63   12.0
+ 4 O   1 nBA SC2  0 -0.55   16.0
+ 5 OE  1 nBA SC3  0 -0.37   16.0
+ 6 CH2 1 nBA SC4  0   0.0   14.0
+ 7 CH2 1 nBA SC5  0   0.0   14.0
+ 8 CH2 1 nBA SC6  0   0.0   14.0
+ 9 CH3 1 nBA SC7  0   0.0   15.0
+[ edges ]
+VC1  VC2
+VC2  SC1
+VC2  SC1
+SC1  SC2
+SC1  SC3
+SC3  SC4
+SC4  SC5
+SC5  SC6
+SC6  SC7
+
+[ moleculetype ]
+NIPAM 3
+
+[ atoms ]
+ 1 CH2  1 NIPAM VC1 1   0.0 14.0
+ 2 CH1  1 NIPAM VC2 2   0.0 13.0
+ 3 C    1 NIPAM SC1 3  0.54 12.0
+ 4 O    1 NIPAM SC2 4 -0.54 16.0
+ 5 N    1 NIPAM SC3 5 -0.50 14.0
+ 6 H    1 NIPAM SC4 6  0.31 1.00
+ 6 CH   1 NIPAM SC5 7  0.19 13.0
+ 7 CH3  1 NIPAM SC6 8   0.0 15.0
+ 8 CH3  1 NIPAM SC7 9   0.0 15.0
+[ edges ]
+VC1  VC2
+VC2  SC1
+VC2  SC1
+SC1  SC2
+SC1  SC3
+SC3  SC4
+SC3  SC5
+SC5  SC6
+SC5  SC7
