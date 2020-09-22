@@ -79,3 +79,21 @@ name "amide"
 +0 +1
 +0 +2
 +0 +3
+
+
+[ link ]
+name "aromatic"
+[ atoms ]
+0 {"atype": "C",  "order": 1}
+1 {"atype": "C",  "order": 1}
+2 {"atype": "C",  "order": 1}
+3 {"atype": "C",  "order": 1}
+4 {"atype": "C",  "order": 1}
+5 {"atype": "C",  "order": 1}
+[ edges ]
++0 +1
++1 +2
++2 +3
++3 +4
++4 +5
++5 +0

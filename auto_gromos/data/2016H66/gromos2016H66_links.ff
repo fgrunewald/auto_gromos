@@ -327,6 +327,14 @@ CHnC "CH0|CH1|CH2|CH3|C"
 [ bonds ]
 +0 +1 2 gb_52 {"type": "52", "comment":"CLCl4-CLCl4" } 
 
+; 16_bonds_0 
+[ link ]
+[ atoms ]
+0 { "atype": "C", "order": 1, "fgroup":"aromatic"} 
+1 { "atype": "C", "order": 1, "fgroup":"aromatic"} 
+[ bonds ]
++0 +1 2 gb_16 {"type": "16", "comment":"C-C arom."} 
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;            ANGLES
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -540,13 +548,13 @@ CHnC "CH0|CH1|CH2|CH3|C"
 +0 +1 +2 2 ga_24 {"type": "24", "comment":"H-NT,NZ-H" } 
 
 ; 25_angles_0 
-;[ link ]
-;[ atoms ]
-;0 { "atype": "H", "order": 1 } 
-;1 { "atype": "NT", "order": 1 } 
-;2 { "atype": $CHn , "order": 1 } 
-;[ angles ]
-;+0 +1 +2 2 ga_25 {"type": "25", "comment":"H-NT-CHn" } 
+[ link ]
+[ atoms ]
+0 { "atype": "HC|C", "order": 1 } 
+1 { "atype": "C", "order": 1, "fgroup":"aromatic" } 
+2 { "atype": "C|HC" , "order": 1 } 
+[ angles ]
++0 +1 +2 2 ga_25 {"type": "25", "comment":"HC-C-C" } 
 
 ; 25_angles_1
 [ link ]
@@ -565,6 +573,26 @@ CHnC "CH0|CH1|CH2|CH3|C"
 2 { "atype": "CH1|CH2|CH3|P" , "order": 1 } 
 [ angles ]
 +0 +1 +2 2 ga_26 {"type": "26", "comment":"P,SI-OA-CHn,P" } 
+
+; 27_angles_0
+; innner ring definition
+;[ link ]
+;[ atoms ]
+;0 { "atype": "CR1|N|C|CH1|CH2|CH3", "order": 1,  "fgroup": "aromatic" } 
+;1 { "atype": "CR1|N|C|CH1|CH2|CH3", "order": 1,   "fgroup": "aromatic" } 
+;2 { "atype": "CR1|N|C|CH1|CH2|CH3" , "order": 1,  "fgroup": "aromatic" } 
+;[ angles ]
+;+0 +1 +2  2 ga_27 {"type": "27", "comment":"HC-C-O" } 
+
+; 27_angles_0
+; subsituent ring definition
+[ link ]
+[ atoms ]
+0 { "atype": "CR1|N|C|CH1|CH2|CH3", "order": 1} 
+1 { "atype": "CR1|N|C|CH1|CH2|CH3", "order": 1, "fgroup": "aromatic" } 
+2 { "atype": "CR1|N|C|CH1|CH2|CH3" , "order": 1} 
+[ angles ]
++0 +1 +2  2 ga_27 {"type": "27", "comment":"HC-C-O" } 
 
 ; 28_angles_0 
 [ link ]
