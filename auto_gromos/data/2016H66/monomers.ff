@@ -218,3 +218,37 @@ SC3  SC4
 SC3  SC5
 SC5  SC6
 SC5  SC7
+
+
+
+[ moleculetype ]
+PS 3
+
+[ atoms ]
+ 1 CH2  1 PS VC1 1   0.0     14.0
+ 2 CH1  1 PS VC2 2   0.1     13.0
+ 3 C    1 PS C1  3  -0.1     12.0
+ 4 C    1 PS C2  4  -0.1298  12.0
+ 5 HC   1 PS H1  5   0.1298  1.0
+ 6 C    1 PS C3  6  -0.1298  12.00
+ 6 HC   1 PS H2  7   0.1298  1.0
+ 7 C    1 PS C4  8  -0.1298  12.0
+ 9 HC   1 PS H3  9   0.1298  1.0
+10 C    1 PS C5  10 -0.1298  12.0
+11 HC   1 PS H4  11  0.1298  1.0
+12 C    1 PS C6  12 -0.1298  12.0
+13 HC   1 PS H5  13  0.1298  1.0
+[ edges ]
+VC1  VC2
+VC2  C1
+C1  C2
+C2  H1
+C2  C3
+C3  C4
+C3  H2
+C4  C5
+C4  H3
+C5  C6
+C5  H4
+C6  H5
+C6  C1

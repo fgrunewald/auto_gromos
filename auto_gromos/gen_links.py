@@ -101,8 +101,10 @@ def gen_links_gromos2016(force_field, names, graph_links, moltypes):
     # 1 carbon atom in the backbone a tetramer captuers
     # the farthest interaction
     molecules = []
-    for r in [2, 3, 4]:
+    for r in [1, 2, 3, 4]:
         for combo in itertools.combinations(names, r=r):
+            if r == 1:
+               combo = [combo[0], combo[0]]
             block_0 = force_field.blocks[combo[0]]
             prev_res = block_0.nodes[list(block_0.nodes())[0]]["resname"]
             prev_moltype = moltypes[prev_res]

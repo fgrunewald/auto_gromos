@@ -22,7 +22,7 @@ def write_blocks(blocks, outname):
             for node in block.nodes:
                 atom = block.nodes[node]
                 _format_atoms = " ".join(['{}' for _ in atom.keys()]) + "\n"
-                _line_values = [node] + [atom[key] for key in ["atype", "resid",
+                _line_values = [node+1] + [atom[key] for key in ["atype", "resid",
                                                                "resname", "atomname",
                                                                "charge_group", "charge", "mass"]]
                 _file.write(_format_atoms.format(*_line_values))
@@ -34,7 +34,7 @@ def write_blocks(blocks, outname):
                     _format_atoms = " ".join(['{}' for _ in inter.atoms])
                     _format_inter = " ".join(['{}' for _ in inter.parameters])
 
-                    values = list(inter.atoms) + inter.parameters
+                    values = [atom+1 for atom in inter.atoms] + inter.parameters
                     if "comment" in inter.meta:
                         _format = _format_atoms + " " + _format_inter + \
                             " {{\"comment\":\"{}\"}}" + '\n'

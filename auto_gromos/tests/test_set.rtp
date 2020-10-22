@@ -834,107 +834,107 @@ C2      O1      C3      ga_15
 ;@BLOCKTYPE 2016H66_orga.mtb BLK DEE SOL TYPE MOLE NAME diethylether
 ; building block (residue, nucleotide, etc.)
 ; RNME
-[ DEE ]
+;[ DEE ]
 ; number of atoms, number of preceding exclusions
 ; NMAT NLIN
-;    5    0
- [ atoms ]
+;;    5    0
+; [ atoms ]
 ; atoms
 ;ATOM ANM  IACM MASS        CGMICGM MAE MSAE
-C1    CH3          0.00000   0
-C2    CH2          0.29000   1
-O1    OE          -0.58000   1
-C3    CH2          0.29000   1
-C4    CH3          0.00000   2
- [ bonds ]
-;  ai    aj   gromos type
+;C1    CH3          0.00000   0
+;C2    CH2          0.29000   1
+;O1    OE          -0.58000   1
+;C3    CH2          0.29000   1
+;C4    CH3          0.00000   2
+; [ bonds ]
+;;  ai    aj   gromos type
 ; bonds
 ;  NB
 ;     4
 ;  IB   JB  MCB
-C1      C2      gb_27
-C2      O1      gb_18
-O1      C3      gb_18
-C3      C4      gb_27
- [ angles ]
+;C1      C2      gb_27
+;C2      O1      gb_18
+;O1      C3      gb_18
+;C3      C4      gb_27
+; [ angles ]
 ;  ai    aj    ak   gromos type
 ; bond angles
 ; NBA
 ;     3
 ;  IB   JB   KB  MCB
-C1      C2      O1      ga_15
-C2      O1      C3      ga_15
-O1      C3      C4      ga_15
- [ impropers ]
+;C1      C2      O1      ga_15
+;C2      O1      C3      ga_15
+;O1      C3      C4      ga_15
+; [ impropers ]
 ;  ai    aj    ak    al   gromos type
-; improper dihedrals
+;; improper dihedrals
 ; NIDA
 ; 
 ;  IB   JB   KB   LB  MCB
- [ dihedrals ]
+; [ dihedrals ]
 ;  ai    aj    ak    al   gromos type
 ; dihedrals
 ; NDA
 ;     6
 ;  IB   JB   KB   LB  MCB
-C1      C2      O1      C3      gd_42
-C1      C2      O1      C3      gd_43
-C1      C2      O1      C3      gd_44
-C2      O1      C3      C4      gd_42
-C2      O1      C3      C4      gd_43
-C2      O1      C3      C4      gd_44
+;C1      C2      O1      C3      gd_42
+;C1      C2      O1      C3      gd_43
+;C1      C2      O1      C3      gd_44
+;C2      O1      C3      C4      gd_42
+;C2      O1      C3      C4      gd_43
+;C2      O1      C3      C4      gd_44
 ;
 ;MTBUILDBLSOLUTE
 ;@BLOCKTYPE 2016H66_orga.mtb BLK MPH SOL TYPE MOLE NAME methylpropylether
 ; building block (residue, nucleotide, etc.)
 ; RNME
-[ MPH ]
+;[ MPH ]
 ; number of atoms, number of preceding exclusions
 ; NMAT NLIN
 ;    5    0
- [ atoms ]
+; [ atoms ]
 ; atoms
-;ATOM ANM  IACM MASS        CGMICGM MAE MSAE
-C1    CH3          0.29000   0
-O1    OE          -0.58000   0
-C2    CH2          0.29000   0
-C3    CH2          0.00000   1
-C4    CH3          0.00000   1
- [ bonds ]
+;;ATOM ANM  IACM MASS        CGMICGM MAE MSAE
+;C1    CH3          0.29000   0
+;O1    OE          -0.58000   0
+;C2    CH2          0.29000   0
+;C3    CH2          0.00000   1
+;C4    CH3          0.00000   1
+; [ bonds ]
 ;  ai    aj   gromos type
 ; bonds
 ;  NB
 ;     4
 ;  IB   JB  MCB
-C1      O1      gb_18
-O1      C2      gb_18
-C2      C3      gb_27
-C3      C4      gb_27
- [ angles ]
+;C1      O1      gb_18
+;O1      C2      gb_18
+;C2      C3      gb_27
+;C3      C4      gb_27
+; [ angles ]
 ;  ai    aj    ak   gromos type
 ; bond angles
 ; NBA
 ;     3
 ;  IB   JB   KB  MCB
-C1      O1      C2      ga_15
-O1      C2      C3      ga_15
-C2      C3      C4      ga_15
- [ impropers ]
+;C1      O1      C2      ga_15
+;O1      C2      C3      ga_15
+;C2      C3      C4      ga_15
+; [ impropers ]
 ;  ai    aj    ak    al   gromos type
 ; improper dihedrals
 ; NIDA
 ; 
 ;  IB   JB   KB   LB  MCB
- [ dihedrals ]
+; [ dihedrals ]
 ;  ai    aj    ak    al   gromos type
 ; dihedrals
 ; NDA
 ;     4
 ;  IB   JB   KB   LB  MCB
-C1      O1      C2      C3      gd_42
-C1      O1      C2      C3      gd_43
-C1      O1      C2      C3      gd_44
-O1      C2      C3      C4      gd_34
+;C1      O1      C2      C3      gd_42
+;C1      O1      C2      C3      gd_43
+;C1      O1      C2      C3      gd_44
+;O1      C2      C3      C4      gd_34
 ;
 ;MTBUILDBLSOLUTE
 ;@BLOCKTYPE 2016H66_orga.mtb BLK DXE SOL TYPE MOLE NAME 1,2-dimethoxyethane
@@ -944,36 +944,36 @@ O1      C2      C3      C4      gd_34
 ; number of atoms, number of preceding exclusions
 ; NMAT NLIN
 ;    6    0
- [ atoms ]
+; [ atoms ]
 ; atoms
 ;ATOM ANM  IACM MASS        CGMICGM MAE MSAE
-C1    CH3          0.29000   0
-O1    OE          -0.58000   0
-C2    CH2          0.29000   0
-C3    CH2          0.29000   1
-O2    OE          -0.58000   1
-C4    CH3          0.29000   1
- [ bonds ]
+;C1    CH3          0.29000   0
+;O1    OE          -0.58000   0
+;C2    CH2          0.29000   0
+;C3    CH2          0.29000   1
+;O2    OE          -0.58000   1
+;C4    CH3          0.29000   1
+; [ bonds ]
 ;  ai    aj   gromos type
 ; bonds
 ;  NB
 ;     5
 ;  IB   JB  MCB
-C1      O1      gb_18
-O1      C2      gb_18
-C2      C3      gb_27
-C3      O2      gb_18
-O2      C4      gb_18
+;C1      O1      gb_18
+;O1      C2      gb_18
+;C2      C3      gb_27
+;C3      O2      gb_18
+;O2      C4      gb_18
  [ angles ]
 ;  ai    aj    ak   gromos type
 ; bond angles
 ; NBA
 ;     4
 ;  IB   JB   KB  MCB
-C1      O1      C2      ga_15
-O1      C2      C3      ga_15
-C2      C3      O2      ga_15
-C3      O2      C4      ga_15
+;C1      O1      C2      ga_15
+;O1      C2      C3      ga_15
+;C2      C3      O2      ga_15
+;C3      O2      C4      ga_15
  [ impropers ]
 ;  ai    aj    ak    al   gromos type
 ; improper dihedrals
@@ -986,15 +986,15 @@ C3      O2      C4      ga_15
 ; NDA
 ;     9
 ;  IB   JB   KB   LB  MCB
-C1      O1      C2      C3      gd_42
-C1      O1      C2      C3      gd_43
-C1      O1      C2      C3      gd_44
-O1      C2      C3      O2      gd_45
-O1      C2      C3      O2      gd_46
-O1      C2      C3      O2      gd_47
-C2      C3      O2      C4      gd_42
-C2      C3      O2      C4      gd_43
-C2      C3      O2      C4      gd_44
+;C1      O1      C2      C3      gd_42
+;C1      O1      C2      C3      gd_43
+;C1      O1      C2      C3      gd_44
+;O1      C2      C3      O2      gd_45
+;O1      C2      C3      O2      gd_46
+;O1      C2      C3      O2      gd_47
+;C2      C3      O2      C4      gd_42
+;C2      C3      O2      C4      gd_43
+;C2      C3      O2      C4      gd_44
 ;
 ;MTBUILDBLSOLUTE
 ;@BLOCKTYPE 2016H66_orga.mtb BLK EAL SOL TYPE MOLE NAME ethanal
@@ -1920,8 +1920,8 @@ N1      C3      C4      ga_15
 ; NDA
 ;     2
 ;  IB   JB   KB   LB  MCB
-C1      C2      N1      C3      gd_34
-C2      N1      C3      C4      gd_34
+C1      C2      N1      C3    gd_29  ;same as below gd_34
+C2      N1      C3      C4    gd_29  ;changed because old makes no sense gd_34
 ;
 ;MTBUILDBLSOLUTE
 ;@BLOCKTYPE 2016H66_orga.mtb BLK TEAN SOL TYPE MOLE NAME triethylamine
@@ -1977,9 +1977,9 @@ N1      C3      C6      ga_15
 ; NDA
 ;     3
 ;  IB   JB   KB   LB  MCB
-C2      N1      C1      C4      gd_34
-C1      N1      C2      C5      gd_34
-C1      N1      C3      C6      gd_34
+C2      N1      C1      C4  gd_29  ; changed because old makes no sense  gd_34
+C1      N1      C2      C5  gd_29  ;  gd_34
+C1      N1      C3      C6  gd_29  ;  gd_34
 ;
 ;MTBUILDBLSOLUTE
 ;@BLOCKTYPE 2016H66_orga.mtb BLK EDAN SOL TYPE MOLE NAME ethylenediamine
@@ -2795,6 +2795,12 @@ C2      C1      H2      C3      gi_1
 C2      C1      C6      C5      gi_1
 C2      C3      C4      C5      gi_1
 C3      C2      H3      C4      gi_1
+C3      C4      C5      C6      gi_1
+C4      C3      H4      C5      gi_1
+C4      C5      C6      C1      gi_1
+C5      C4      H5      C6      gi_1
+C6      C1      C2      C3      gi_1
+C6      C1      C5      H6      gi_1
 
 [ TOL ]
 ; number of atoms, number of preceding exclusions
@@ -2896,3 +2902,5 @@ C3      C2      H3      C4      gi_1
 C6      C1      C2      C3      gi_1
 C6      C1      H6      C5      gi_1
 C6      C5      C4      C3      gi_1
+C5      C6      H5      C4      gi_1
+C4      C3      C5      H4      gi_1

@@ -66,7 +66,8 @@ def main():
                 "MXMA": "polyvinyl",
                 "nBA": "polyvinyl",
                 "NIPAM": "polyvinyl",
-                "PMA": "polyvinyl"}
+                "PMA": "polyvinyl", 
+                "PS": "polyvinyl"}
 
     force_field = ForceField("gromos")
     with open(DATA_PATH + "/2016H66/monomers.ff") as _file:
