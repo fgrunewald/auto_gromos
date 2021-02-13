@@ -17,18 +17,32 @@ class SelectDihedrals(Processor):
         Select one dihedrals for each rotatable bond
         based on using the dihdral with higher priority.
         """
+        dih_dict = defaultdict(list)
         if "dihedrals" in molecule.interactions:
-            dih_dict = defaultdict(list)
             for dih in molecule.interactions["dihedrals"]:
                 atoms = dih.atoms
-                dih_dict[(frozenset([atoms[1], atoms[2]]))].append(dih)
-            
-            molecule.interactions["dihedrals"] = []
-            
-            for bond in dih_dict:
-                prios = [dih.meta["priority"]
-                         for idx, dih in enumerate(dih_dict[bond])]
+                dih_dict[(frozenset([atoms[1], atoms[2]]))].append(("dihedrals", dih))
+
+        if "impropers" in molecule.interactions:
+            for dih in molecule.interactions["impropers"]:
+                atoms = dih.atoms
+                dih_dict[(frozenset([atoms[1], atoms[2]]))].append(("impropers", dih))
+
+        molecule.interactions["dihedrals"] = []
+        molecule.interactions["impropers"] = []
+
+        for bond in dih_dict:
+            special = False
+            for inter_type, dih in dih_dict[bond]:
+                if "keep" in dih.meta:
+                    special=True
+                    molecule.interactions[inter_type].append(dih)
+
+            if not special:
+                prios = [dih[1].meta["priority"]
+                        for idx, dih in enumerate(dih_dict[bond])]
                 keep = prios.index(max(prios))
-                molecule.interactions["dihedrals"].append(dih_dict[bond][keep])
+                inter_type, dih_to_keep = dih_dict[bond][keep]
+                molecule.interactions[inter_type].append(dih_to_keep)
 
         return molecule

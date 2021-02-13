@@ -18,7 +18,11 @@ class RemoveDuplicates(Processor):
         for inter_type in molecule.interactions:
             inter_dict = defaultdict(list)
             for inter in molecule.interactions[inter_type]:
-                inter_dict[frozenset(inter.atoms)] = inter
+                if "version" in inter.meta:
+                    version = inter.meta["version"]
+                    inter_dict[(frozenset(inter.atoms), version)] = inter
+                else:
+                    inter_dict[(frozenset(inter.atoms), 1)] = inter
 
             molecule.interactions[inter_type] = []
             for inter in inter_dict.values():

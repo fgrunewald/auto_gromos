@@ -1,5 +1,5 @@
 [ macros ]
-ALL_ATOM "CH0|H|CH1|CH2|CH3|OA|OE|C|O|NL|NT|N|NZ|SI|P|S"
+ALL_ATOM "CH0|H|CH1|CH2|CH3|OA|OE|C|O|NL|NT|N|NZ|SI|P|S|HC"
 CHn "CH0|CH1|CH2|CH3"
 CHnC "CH0|CH1|CH2|CH3|C"
 
@@ -9,7 +9,7 @@ CHnC "CH0|CH1|CH2|CH3|C"
 0 { "atype": "OA", "order": 1} 
 1 { "atype": "H", "order": 1} 
 [ bonds ]
-+0 +1 2 gb_1 {"type": "1", "commnet": "OA-H" } 
++0 +1 2 gb_1 {"type": "1", "comment": "OA-H" } 
 
 ; 2_bonds_0 
 [ link ]
@@ -327,6 +327,14 @@ CHnC "CH0|CH1|CH2|CH3|C"
 [ bonds ]
 +0 +1 2 gb_52 {"type": "52", "comment":"CLCl4-CLCl4" } 
 
+; 16_bonds_0 
+[ link ]
+[ atoms ]
+0 { "atype": "C", "order": 1, "fgroup":"aromatic"} 
+1 { "atype": "C", "order": 1, "fgroup":"aromatic"} 
+[ bonds ]
++0 +1 2 gb_16 {"type": "16", "comment":"C-C arom."} 
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;            ANGLES
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -449,15 +457,6 @@ CHnC "CH0|CH1|CH2|CH3|C"
 [ angles ]
 +0 +1 +2 2 ga_16 {"type": "16", "comment":"CHn-CH2-S" } 
 
-; 16_angles_1
-[ link ]
-[ atoms ]
-0 { "atype": $CHnC , "order": 1 } 
-1 { "atype": "C", "order": 1 } 
-2 { "atype": "OE|OA", "order": 1 } 
-[ angles ]
-+0 +1 +2 2 ga_16 {"type": "16", "comment":"CHn,C-C-OA,OE" } 
-
 ; 18_angles_0 
 [ link ]
 [ atoms ]
@@ -485,15 +484,6 @@ CHnC "CH0|CH1|CH2|CH3|C"
 [ angles ]
 +0 +1 +2 2 ga_20 {"type": "20", "comment": "H-NE-CH2" } 
 
-; 21_angles_0 
-[ link ]
-[ atoms ]
-0 { "atype": "CH2", "order": 1 } 
-1 { "atype": "N", "order": 1 } 
-2 { "atype": "CH1", "order": 1 } 
-[ angles ]
-+0 +1 +2 2 ga_21 {"type": "21", "comment": "CH2-N-CH1" } 
-
 ; 21_angles_1
 [ link ]
 [ atoms ]
@@ -502,6 +492,15 @@ CHnC "CH0|CH1|CH2|CH3|C"
 2 { "atype": "CH1|CH2|CH3|HC|C", "order": 1 } 
 [ angles ]
 +0 +1 +2 2 ga_21 {"type": "21", "comment":"CHn-C-CHn,C,HC" } 
+
+; 21_angles_0 
+[ link ]
+[ atoms ]
+0 { "atype": "CH2", "order": 1 } 
+1 { "atype": "N", "order": 1 } 
+2 { "atype": "CH1", "order": 1 } 
+[ angles ]
++0 +1 +2 2 ga_21 {"type": "21", "comment": "CH2-N-CH1" } 
 
 ; 22_angles_0 
 [ link ]
@@ -549,13 +548,13 @@ CHnC "CH0|CH1|CH2|CH3|C"
 +0 +1 +2 2 ga_24 {"type": "24", "comment":"H-NT,NZ-H" } 
 
 ; 25_angles_0 
-;[ link ]
-;[ atoms ]
-;0 { "atype": "H", "order": 1 } 
-;1 { "atype": "NT", "order": 1 } 
-;2 { "atype": $CHn , "order": 1 } 
-;[ angles ]
-;+0 +1 +2 2 ga_25 {"type": "25", "comment":"H-NT-CHn" } 
+[ link ]
+[ atoms ]
+0 { "atype": "HC|C", "order": 1 } 
+1 { "atype": "C", "order": 1, "fgroup":"aromatic" } 
+2 { "atype": "C|HC" , "order": 1 } 
+[ angles ]
++0 +1 +2 2 ga_25 {"type": "25", "comment":"HC-C-C" } 
 
 ; 25_angles_1
 [ link ]
@@ -574,6 +573,26 @@ CHnC "CH0|CH1|CH2|CH3|C"
 2 { "atype": "CH1|CH2|CH3|P" , "order": 1 } 
 [ angles ]
 +0 +1 +2 2 ga_26 {"type": "26", "comment":"P,SI-OA-CHn,P" } 
+
+; 27_angles_0
+; innner ring definition
+;[ link ]
+;[ atoms ]
+;0 { "atype": "CR1|N|C|CH1|CH2|CH3", "order": 1,  "fgroup": "aromatic" } 
+;1 { "atype": "CR1|N|C|CH1|CH2|CH3", "order": 1,   "fgroup": "aromatic" } 
+;2 { "atype": "CR1|N|C|CH1|CH2|CH3" , "order": 1,  "fgroup": "aromatic" } 
+;[ angles ]
+;+0 +1 +2  2 ga_27 {"type": "27", "comment":"HC-C-O" } 
+
+; 27_angles_0
+; subsituent ring definition
+[ link ]
+[ atoms ]
+0 { "atype": "CR1|N|C|CH1|CH2|CH3", "order": 1} 
+1 { "atype": "CR1|N|C|CH1|CH2|CH3", "order": 1, "fgroup": "aromatic" } 
+2 { "atype": "CR1|N|C|CH1|CH2|CH3" , "order": 1} 
+[ angles ]
++0 +1 +2  2 ga_27 {"type": "27", "comment":"6-ring" } 
 
 ; 28_angles_0 
 [ link ]
@@ -620,13 +639,12 @@ CHnC "CH0|CH1|CH2|CH3|C"
 [ angles ]
 +0 +1 +2 2 ga_31 {"type": "31", "comment":"CH1,CH2-N-C" } 
 
-
 ; 31_angles_1 
 [ link ]
 [ atoms ]
-0 { "atype": "O", "order": 1 } 
-1 { "atype": "C", "order": 1 } 
-2 { "atype": "OA|OE|CH2|CH1|CH3", "order": 1 } 
+0 { "atype": "O", "order": 1, "fgroup":"ketone|ester|carboxylic-acid" } 
+1 { "atype": "C", "order": 1, "fgroup":"ketone|ester|carboxylic-acid" } 
+2 { "atype": "OA|OE|CH2|CH1|CH3", "order": 1, "fgroup":"ketone|ester|carboxylic-acid" } 
 [ angles ]
 +0 +1 +2 2 ga_31 {"type": "31", "comment":"O-C-OA,OE,CHn" } 
 
@@ -643,9 +661,18 @@ CHnC "CH0|CH1|CH2|CH3|C"
 ; 33_angles_0 
 [ link ]
 [ atoms ]
-0 { "atype": "O", "order": 1 } 
-1 { "atype": "C", "order": 1 } 
-2 { "atype": "OA|N|NL|NT", "order": 1 } 
+0 { "atype": "O", "order": 1, "fgroup":"aldehyde"} 
+1 { "atype": "C", "order": 1,  "fgroup":"aldehyde" } 
+2 { "atype": "OA|N|NL|NT", "order": 1,  "fgroup":"aldehyde" } 
+[ angles ]
++0 +1 +2 2 ga_33 {"type": "33", "comment":"O-C-OA,N,NL,NT" } 
+
+; 33_angles_0 
+[ link ]
+[ atoms ]
+0 { "atype": "O", "order": 1} 
+1 { "atype": "C", "order": 1  } 
+2 { "atype": "N|NL|NT", "order": 1 } 
 [ angles ]
 +0 +1 +2 2 ga_33 {"type": "33", "comment":"O-C-OA,N,NL,NT" } 
 
@@ -666,6 +693,15 @@ CHnC "CH0|CH1|CH2|CH3|C"
 2 { "atype": $CHn , "order": 1, "fgroup":"aldehyde" } 
 [ angles ]
 +0 +1 +2 2 ga_33 {"type": "33", "comment":"O-C-CHn aldehyde" } 
+
+; 16_angles_1
+[ link ]
+[ atoms ]
+0 { "atype": $CHnC , "order": 1, "fgroup":"carboxylic-acid|ester" } 
+1 { "atype": "C", "order": 1 , "fgroup":"carboxylic-acid|ester"} 
+2 { "atype": "OE|OA", "order": 1 , "fgroup":"carboxylic-acid|ester"} 
+[ angles ]
++0 +1 +2 2 ga_16 {"type": "16", "comment":"CHn,C-C-OA,OE" } 
 
 ; 35_angles_0
 [ link ]
@@ -826,25 +862,15 @@ CHnC "CH0|CH1|CH2|CH3|C"
 [ dihedrals ]
 +0 +1 +2 +3  1 gd_10 {"type": "10", "priority": 0, "comment": "X-C-C-X"} 
 
-; 12_dihedrals_0 
-[ link ]
-[ atoms ]
-0 { "atype": $ALL_ATOM , "order": 1} 
-1 { "atype": "C", "order": 1 , "fgroup":"ester|carboxylic-acid" } 
-2 { "atype": "OE|OA", "order": 1 , "fgroup":"ester|carboxylic-acid" } 
-3 { "atype": $ALL_ATOM , "order": 1 } 
-[ dihedrals ]
-+0 +1 +2 +3 1 gd_12 {"type": "12", "priority": 0, "comment": "X-C-OE,OA-X, carboxylic" } 
-
 ; 14_dihedrals_0 
-[ link ]
-[ atoms ]
-0 { "atype": $ALL_ATOM , "order": 1 } 
-1 { "atype": "C", "order": 1 } 
-2 { "atype": "N", "order": 1 } 
-3 { "atype": $ALL_ATOM , "order": 1 } 
-[ dihedrals ]
-+0 +1 +2 +3 1 gd_14 {"type": "14", "priority": 0, "comment":"X-C-N-X" } 
+;[ link ]
+;[ atoms ]
+;0 { "atype": $ALL_ATOM , "order": 1 } 
+;1 { "atype": "C", "order": 1 } 
+;2 { "atype": "N", "order": 1 } 
+;3 { "atype": $ALL_ATOM , "order": 1 } 
+;[ dihedrals ]
+;+0 +1 +2 +3 1 gd_14 {"type": "14", "priority": 1, "comment":"X-C-N-X" } 
 
 ; 14_dihedrals_1 
 [ link ]
@@ -854,7 +880,7 @@ CHnC "CH0|CH1|CH2|CH3|C"
 2 { "atype": "NT", "order": 1 } 
 3 { "atype": $ALL_ATOM , "order": 1 } 
 [ dihedrals ]
-+0 +1 +2 +3 1 X-C-NT-X {"type": "14", "priority": 0, "comment":"X-C-NT-X"} 
++0 +1 +2 +3 1 X-C-NT-X {"type": "14", "priority": 1, "comment":"X-C-NT-X"} 
 
 ; 14_dihedrals_2 
 [ link ]
@@ -864,7 +890,7 @@ CHnC "CH0|CH1|CH2|CH3|C"
 2 { "atype": "NE", "order": 1 } 
 3 { "atype": $ALL_ATOM , "order": 1 } 
 [ dihedrals ]
-+0 +1 +2 +3 1 gd_14 {"type": "14", "priority": 0, "comment":"X-C-NE-X" } 
++0 +1 +2 +3 1 gd_14 {"type": "14", "priority": 1, "comment":"X-C-NE-X" } 
 
 ; 14_dihedrals_3 
 [ link ]
@@ -874,7 +900,7 @@ CHnC "CH0|CH1|CH2|CH3|C"
 2 { "atype": "NZ", "order": 1 } 
 3 { "atype": $ALL_ATOM , "order": 1 } 
 [ dihedrals ]
-+0 +1 +2 +3 1 gd_14 {"type": "14", "priority": 0, "comment":"X-C-NZ-X" } 
++0 +1 +2 +3 1 gd_14 {"type": "14", "priority": 1, "comment":"X-C-NZ-X" } 
 
 ; 14_dihedrals_4 
 [ link ]
@@ -884,7 +910,7 @@ CHnC "CH0|CH1|CH2|CH3|C"
 2 { "atype": "NR", "order": 1 } 
 3 { "atype": $ALL_ATOM , "order": 1 } 
 [ dihedrals ]
-+0 +1 +2 +3 1 gd_14 {"type": "14", "priority": 0, "comment":"X-C-NR-X" } 
++0 +1 +2 +3 1 gd_14 {"type": "14", "priority": 1, "comment":"X-C-NR-X" } 
 
 ; 17_dihedrals_0 
 [ link ]
@@ -960,31 +986,51 @@ CHnC "CH0|CH1|CH2|CH3|C"
 [ link ]
 [ atoms ]
 0 { "atype": $ALL_ATOM , "order": 1 } 
-1 { "atype": "CH2", "order": 1 } 
+1 { "atype": "CH2", "order":1}
 2 { "atype": "S", "order": 1 } 
 3 { "atype": $ALL_ATOM , "order": 1 } 
 [ dihedrals ]
-+0 +1 +2 +3 2 gd_26 {"type": "26", "priority": 0, "comment":"X-CH2-S-X"} 
++0 +1 +2 +3 1 gd_26 {"type": "26", "priority": 0, "comment":"X-CH2-S-X"} 
+
+; 41_dihedrals_0 
+[ link ]
+[ atoms ]
+0 { "atype": $ALL_ATOM , "order": 1 } 
+1 { "atype": $CHn , "order": 1 } 
+2 { "atype": "NT", "order": 1 } 
+3 { "atype": $ALL_ATOM , "order": 1 } 
+[ dihedrals ]
++0 +1 +2 +3 1 gd_41 {"type": "41", "priority": 0, "comment": "X-CHn-NT-X" } 
 
 ; 29_dihedrals_0 
 [ link ]
 [ atoms ]
 0 { "atype": $ALL_ATOM , "order": 1 } 
-1 { "atype": "CH1|CH2|CH3|C|N|SI", "order": 1 } 
-2 { "atype": "CH1|CH2|CH3|C|N|SI", "order": 1 } 
+1 { "atype": "CH1|CH2|CH3|C|N|SI|O|OE|NT", "order": 1 } 
+2 { "atype": "CH1|CH2|CH3|C|N|SI|O|OE|NT", "order": 1 } 
 3 { "atype": $ALL_ATOM , "order": 1 } 
 [ dihedrals ]
 +0 +1 +2 +3 1 gd_29 {"type": "29", "priority": 0, "comment": "X-CHn,C,N,SI-CHn,C,N,SI-X" } 
 
-; 31_dihedrals_0 
+; 12_dihedrals_0 
 [ link ]
 [ atoms ]
-0 { "atype": "HC", "order": 1 } 
-1 { "atype": "C", "order": 1 } 
-2 { "atype": "S", "order": 1 } 
+0 { "atype": $ALL_ATOM , "order": 1} 
+1 { "atype": "C", "order": 1 , "fgroup":"ester|carboxylic-acid" } 
+2 { "atype": "OE|OA", "order": 1 , "fgroup":"ester|carboxylic-acid" } 
 3 { "atype": $ALL_ATOM , "order": 1 } 
 [ dihedrals ]
-+0 +1 +2 +3 1 gd_31 {"type": "31", "priority": 1, "comment":"HC-C-S-X"} 
++0 +1 +2 +3 1 gd_12 {"type": "12", "priority": 0, "comment": "X-C-OE,OA-X, carboxylic" } 
+
+; 14_dihedrals_0 
+[ link ]
+[ atoms ]
+0 { "atype": $ALL_ATOM , "order": 1 } 
+1 { "atype": "C", "order": 1 } 
+2 { "atype": "N", "order": 1 } 
+3 { "atype": $ALL_ATOM , "order": 1 } 
+[ dihedrals ]
++0 +1 +2 +3 1 gd_14 {"type": "14", "priority": 1, "comment":"X-C-N-X" } 
 
 ; 33_dihedrals_0 
 [ link ]
@@ -1036,15 +1082,37 @@ CHnC "CH0|CH1|CH2|CH3|C"
 [ dihedrals ]
 +0 +1 +2 +3 1 gd_39 {"type": "39", "priority": 0, "comment":"X-CHn-NE-X" } 
 
-; 41_dihedrals_0 
+; 31_dihedrals_0 
+[ link ]
+[ atoms ]
+0 { "atype": "HC", "order": 1 } 
+1 { "atype": "C", "order": 1 } 
+2 { "atype": "S", "order": 1 } 
+3 { "atype": $ALL_ATOM , "order": 1 } 
+[ dihedrals ]
++0 +1 +2 +3 1 gd_31 {"type": "31", "priority": 1, "comment":"HC-C-S-X"} 
+
+
+; 31_dihedrals_1
+[ link ]
+[ atoms ]
+0 { "atype": $CHnC , "order": 1 } 
+1 { "atype": $CHnC , "order": 1 } 
+2 { "atype": $CHnC , "order": 1 } 
+3 { "atype": "S" , "order": 1 } 
+[ dihedrals ]
++0 +1 +2 +3 1 gd_31 {"type": "31", "priority": 1, "comment":"HC-C-S-X"} 
+
+
+; 40_dihedrals_0 
 [ link ]
 [ atoms ]
 0 { "atype": $ALL_ATOM , "order": 1 } 
 1 { "atype": $CHn , "order": 1 } 
-2 { "atype": "NT", "order": 1 } 
+2 { "atype": "C|CR1", "order": 1 } 
 3 { "atype": $ALL_ATOM , "order": 1 } 
 [ dihedrals ]
-+0 +1 +2 +3 1 gd_41 {"type": "41", "priority": 0, "comment": "X-CHn-NT-X" } 
++0 +1 +2 +3 1 gd_40 {"type": "40", "version": 1, "priority": 2, "comment":"X-CHn-C,CR1-X"} 
 
 ; 42_dihedrals_0 
 [ link ]
@@ -1054,7 +1122,7 @@ CHnC "CH0|CH1|CH2|CH3|C"
 2 { "atype": "OE", "order": 1 } 
 3 { "atype": $CHn , "order": 1 } 
 [ dihedrals ]
-+0 +1 +2 +3 1 gd_42 {"type": "42", "version": 1, "priority": 2, "comment":"CHn-CHn-OE-CHn"} 
++0 +1 +2 +3 1 gd_42 {"type": "42", "version": 1, "priority": 2, "comment":"CHn-CHn-OE-CHn", "keep":"true"} 
 
 ; 43_dihedrals_0 
 [ link ]
@@ -1064,7 +1132,7 @@ CHnC "CH0|CH1|CH2|CH3|C"
 2 { "atype": "OE", "order": 1 } 
 3 { "atype": $CHn , "order": 1 } 
 [ dihedrals ]
-+0 +1 +2 +3 1 gd_43 {"type": "43", "version": 2 , "priority": 2, "comment":"CHn-CHn-OE-CHn"} 
++0 +1 +2 +3 1 gd_43 {"type": "43", "version": 2 , "priority": 2, "comment":"CHn-CHn-OE-CHn", "keep":"true"} 
 
 ; 44_dihedrals_0 
 [ link ]
@@ -1074,7 +1142,7 @@ CHnC "CH0|CH1|CH2|CH3|C"
 2 { "atype": "OE", "order": 1 } 
 3 { "atype": $CHn , "order": 1 } 
 [ dihedrals ]
-+0 +1 +2 +3 1 gd_44 {"type": "44", "version": 3, "priority": 2, "comment":"CHn-CHn-OE-CHn" } 
++0 +1 +2 +3 1 gd_44 {"type": "44", "version": 3, "priority": 2, "comment":"CHn-CHn-OE-CHn", "keep":"true" } 
 
 ; 45_dihedrals_0 
 [ link ]
@@ -1084,7 +1152,7 @@ CHnC "CH0|CH1|CH2|CH3|C"
 2 { "atype": $CHn , "order": 1 } 
 3 { "atype": "OE", "order": 1 } 
 [ dihedrals ]
-+0 +1 +2 +3 1 gd_45 {"type": "45", "verison": 1, "priority": 2, "comment":"OE-CHn-CHn-OE" } 
++0 +1 +2 +3 1 gd_45 {"type": "45", "verison": 1, "priority": 2, "comment":"OE-CHn-CHn-OE", "keep":"true" } 
 
 ; 46_dihedrals_0 
 [ link ]
@@ -1094,7 +1162,7 @@ CHnC "CH0|CH1|CH2|CH3|C"
 2 { "atype": $CHn , "order": 1 } 
 3 { "atype": "OE", "order": 1 } 
 [ dihedrals ]
-+0 +1 +2 +3 1 gd_46 {"type": "46", "version": 2, "priority": 2, "comment":"OE-CHn-CHn-OE" } 
++0 +1 +2 +3 1 gd_46 {"type": "46", "version": 2, "priority": 2, "comment":"OE-CHn-CHn-OE", "keep":"true" } 
 
 ; 47_dihedrals_0 
 [ link ]
@@ -1104,7 +1172,7 @@ CHnC "CH0|CH1|CH2|CH3|C"
 2 { "atype": $CHn , "order": 1 } 
 3 { "atype": "OE", "order": 1 } 
 [ dihedrals ]
-+0 +1 +2 +3 1 gd_47  {"type": "47", "version": 3, "priority": 2, "comment":"OE-CHn-CHn-OE"} 
++0 +1 +2 +3 1 gd_47  {"type": "47", "version": 3, "priority": 2, "comment":"OE-CHn-CHn-OE", "keep":"true"} 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;   Improper Dihedrals
@@ -1112,16 +1180,42 @@ CHnC "CH0|CH1|CH2|CH3|C"
 
 [ link ]
 [ atoms ]
-0 { "atype": $ALL_ATOM , "order": 1,  "fgroup":  "ester|carboxylic-acid|aldehyde|amide" } 
-1 { "atype": $ALL_ATOM , "order": 1,  "fgroup": "ester|carboxylic-acid|aldehyde|amide" } 
-2 { "atype": $ALL_ATOM , "order": 1, "fgroup" : "ester|carboxylic-acid|aldehyde|amide" } 
-3 { "atype": $ALL_ATOM , "order": 1, "fgroup": "ester|carboxylic-acid|aldehyde|amide"  } 
+0 { "atype": $ALL_ATOM , "order": 1 , "fgroup":  "ketone|aromatic|ester|carboxylic-acid|aldehyde|amide" } 
+1 { "atype": $ALL_ATOM , "order": 1} ;,  "fgroup": "aromatic|ketone|ester|carboxylic-acid|aldehyde|amide" } 
+2 { "atype": $ALL_ATOM , "order": 1} ;, "fgroup" : "aromatic|ketone|ester|carboxylic-acid|aldehyde|amide" } 
+3 { "atype": $ALL_ATOM , "order": 1} ;, "fgroup": "aromatic|ketone|ester|carboxylic-acid|aldehyde|amide"  } 
 [ impropers ]
-+0 +1 +2 +3 1 gi_1  {"type": "1", "priority": 2, "comment":"planar center"} 
++0 +1 +2 +3 2 gi_1  {"type": "1", "priority": 3, "comment":"planar center"} 
 [ edges ]
 +0 +1
 +0 +2
 +0 +3
+
+;[ link ]
+;[ atoms ]
+;0 { "atype": $CHnC , "order": 1 , "fgroup":  "ketone" }
+;1 { "atype": $CHnC , "order": 1,   "fgroup": "ketone"}
+;2 { "atype": "O" , "order": 1 , "fgroup" : "ketone" }
+;3 { "atype": $CHnC , "order":1 , "fgroup" : "ketone" }
+;[ impropers ]
+;+0 +1 +2 +3 2 gi_1  {"type": "1", "priority": 2, "comment":"planar center"}
+;[ edges ]
+;+0 +1
+;+0 +2
+;+0 +3
+
+[ link ]
+[ atoms ]
+0 { "atype": $ALL_ATOM , "order": 1 , "fgroup":  "aromatic" }
+1 { "atype": $ALL_ATOM , "order": 1, "fgroup":  "aromatic"}
+2 { "atype": $ALL_ATOM , "order": 1, "fgroup":  "aromatic"}
+3 { "atype": $ALL_ATOM , "order": 1, "fgroup":  "aromatic"}
+[ impropers ]
++0 +1 +2 +3 2 gi_1  {"type": "1", "priority": 3, "comment":"arom. planar center"}
+[ edges ]
++0 +1
++1 +2
++2 +3
 
 [ link ]
 [ atoms ]
@@ -1130,8 +1224,21 @@ CHnC "CH0|CH1|CH2|CH3|C"
 2 { "atype": $ALL_ATOM , "order": 1, "fgroup" : "tetra" } 
 3 { "atype": $ALL_ATOM , "order": 1, "fgroup": "tetra"  } 
 [ impropers ]
-+0 +1 +2 +3 1 gi_2  {"type": "1", "priority": 2, "comment":"tetrahedral center"} 
++0 +1 +2 +3 2 gi_2  {"type": "1", "priority": 3, "comment":"tetrahedral center"} 
 [ edges ]
 +0 +1
 +0 +2
 +0 +3
+
+[ link ]
+[ atoms ]
+0 { "atype": $ALL_ATOM , "order": 1 } 
+1 { "atype": $ALL_ATOM , "order": 1,  "fgroup": "aromatic" } 
+2 { "atype": $ALL_ATOM , "order": 1, "fgroup" : "aromatic" } 
+3 { "atype": $ALL_ATOM , "order": 1 } 
+[edges]
++0 +1
++1 +2
++2 +3
+[ exclusions ]
++0 +3 

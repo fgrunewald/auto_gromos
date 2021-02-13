@@ -62,7 +62,7 @@ class AssignFunctionalGroups(Processor):
             for raw_match in raw_matches:
                 for node in raw_match.keys():
                     if "fgroup" in self.molecule.nodes[node]:
-                        self.molecule.nodes[node].values.append(name)
+                        self.molecule.nodes[node]["fgroup"].value.append(name)
                     else:
                         fgroup = Choice([name])
                         self.molecule.nodes[node]["fgroup"] = fgroup
